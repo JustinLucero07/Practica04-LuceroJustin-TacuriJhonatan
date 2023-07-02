@@ -13,6 +13,8 @@ import javax.swing.BorderFactory;
 import javax.swing.JOptionPane;
 import javax.swing.border.Border;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableColumn;
+import javax.swing.table.TableColumnModel;
 
 /**
  *
@@ -34,6 +36,29 @@ public class ListarCantante extends javax.swing.JInternalFrame {
         bntSalir.setText(mensajes.getString("boton.salir"));
         Border borde = BorderFactory.createTitledBorder(mensajes.getString("panel.listarcantante"));
         jpanelA.setBorder(borde);
+        TableColumnModel columnModel = tblCanatntes.getColumnModel();
+        TableColumn columnaId = columnModel.getColumn(0);
+        columnaId.setHeaderValue(mensajes.getString("ventana.id"));
+        TableColumn columnaNombre = columnModel.getColumn(1);
+        columnaNombre.setHeaderValue(mensajes.getString("ventana.nombre"));
+        TableColumn columnaApellido = columnModel.getColumn(2);
+        columnaApellido.setHeaderValue(mensajes.getString("ventana.apellido"));
+        TableColumn columnaEdad = columnModel.getColumn(3);
+        columnaEdad.setHeaderValue(mensajes.getString("ventana.edad"));
+        TableColumn columnaNacionalidad = columnModel.getColumn(4);
+        columnaNacionalidad.setHeaderValue(mensajes.getString("ventana.nacionalidad"));
+        TableColumn columnaSalario = columnModel.getColumn(5);
+        columnaSalario.setHeaderValue(mensajes.getString("ventana.salario"));
+        TableColumn columnaNombreArtistico = columnModel.getColumn(6);
+        columnaNombreArtistico.setHeaderValue(mensajes.getString("ventanaCantante.nombreartistico"));
+        TableColumn columnaGeneroMusical = columnModel.getColumn(7);
+        columnaGeneroMusical.setHeaderValue(mensajes.getString("ventanaCantante.generomusical"));
+        TableColumn columnaNumeroSencillos = columnModel.getColumn(8);
+        columnaNumeroSencillos.setHeaderValue(mensajes.getString("ventanaCantante.numerosencillos"));
+        TableColumn columnaNumeroConciertos = columnModel.getColumn(9);
+        columnaNumeroConciertos.setHeaderValue(mensajes.getString("ventanaCantante.numeroconciertos"));
+        TableColumn columnaNumeroGiras = columnModel.getColumn(10);
+        columnaNumeroGiras.setHeaderValue(mensajes.getString("ventanaCantante.numerogiras"));
         
     }
     
@@ -73,13 +98,13 @@ public class ListarCantante extends javax.swing.JInternalFrame {
 
         tblCanatntes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "ID", "Nombre", "Apellido", "Edad", "Nacionalida", "Salario", "Artistico", "Genero"
+                "ID", "Nombre", "Apellido", "Edad", "Nacionalida", "Salario", "Artistico", "Genero", "Número de Sencillos", "Numero de Conciertos", "Numero de Giras"
             }
         ));
         jScrollPane1.setViewportView(tblCanatntes);
@@ -96,14 +121,13 @@ public class ListarCantante extends javax.swing.JInternalFrame {
         jpanelALayout.setHorizontalGroup(
             jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpanelALayout.createSequentialGroup()
-                .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jpanelALayout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 696, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jpanelALayout.createSequentialGroup()
-                        .addGap(288, 288, 288)
-                        .addComponent(bntSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addGap(288, 288, 288)
+                .addComponent(bntSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jpanelALayout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 855, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jpanelALayout.setVerticalGroup(
             jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

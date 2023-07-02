@@ -12,6 +12,8 @@ import java.util.ResourceBundle;
 import javax.swing.BorderFactory;
 import javax.swing.border.Border;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableColumn;
+import javax.swing.table.TableColumnModel;
 
 /**
  *
@@ -33,7 +35,21 @@ public class ListarCompositor extends javax.swing.JInternalFrame {
         btnSalir.setText(mensajes.getString("boton.salir"));
         Border borde = BorderFactory.createTitledBorder(mensajes.getString("panel.listarcompositor"));
         jpanelA.setBorder(borde);
-        
+        TableColumnModel columnModel = tblCompositor.getColumnModel();
+        TableColumn columnaId = columnModel.getColumn(0);
+        columnaId.setHeaderValue(mensajes.getString("ventana.id"));
+        TableColumn columnaNombre = columnModel.getColumn(1);
+        columnaNombre.setHeaderValue(mensajes.getString("ventana.nombre"));
+        TableColumn columnaApellido = columnModel.getColumn(2);
+        columnaApellido.setHeaderValue(mensajes.getString("ventana.apellido"));
+        TableColumn columnaEdad = columnModel.getColumn(3);
+        columnaEdad.setHeaderValue(mensajes.getString("ventana.edad"));
+        TableColumn columnaNacionalidad = columnModel.getColumn(4);
+        columnaNacionalidad.setHeaderValue(mensajes.getString("ventana.nacionalidad"));
+        TableColumn columnaSalario = columnModel.getColumn(5);
+        columnaSalario.setHeaderValue(mensajes.getString("ventana.salario"));
+        TableColumn columnaNumeroComposiciones = columnModel.getColumn(6);
+        columnaNumeroComposiciones.setHeaderValue(mensajes.getString("ventanaCompositor.numerocomposiciones"));
     }
     
     /**

@@ -11,6 +11,8 @@ import java.util.ResourceBundle;
 import javax.swing.BorderFactory;
 import javax.swing.JOptionPane;
 import javax.swing.border.Border;
+import javax.swing.table.TableColumn;
+import javax.swing.table.TableColumnModel;
 
 /**
  *
@@ -41,6 +43,15 @@ public class BuscarCompositor extends javax.swing.JInternalFrame {
         btnCancelar.setText(mensajes.getString("boton.cancelar"));
         Border borde = BorderFactory.createTitledBorder(mensajes.getString("panel.buscarcompositor"));
         jpanelA.setBorder(borde);
+        TableColumnModel columnModel = tblCancion.getColumnModel();
+        TableColumn columnaCodigo = columnModel.getColumn(0);
+        columnaCodigo.setHeaderValue(mensajes.getString("ventana.codigo"));
+        TableColumn columnaLetra = columnModel.getColumn(1);
+        columnaLetra.setHeaderValue(mensajes.getString("ventanaCancion.letra"));
+        TableColumn columnaTitulo = columnModel.getColumn(2);
+        columnaTitulo.setHeaderValue(mensajes.getString("ventanaCancion.titulo"));
+        TableColumn columnaDuracion = columnModel.getColumn(3);
+        columnaDuracion.setHeaderValue(mensajes.getString("ventanaCancion.duracioncancion"));
     }
     
     /**
@@ -70,7 +81,7 @@ public class BuscarCompositor extends javax.swing.JInternalFrame {
         btnAceptar = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tblCancion = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
 
@@ -158,7 +169,7 @@ public class BuscarCompositor extends javax.swing.JInternalFrame {
             }
         });
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tblCancion.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -169,7 +180,7 @@ public class BuscarCompositor extends javax.swing.JInternalFrame {
                 "Codigo", "Letra", "Título", "Duración de Canción"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tblCancion);
 
         javax.swing.GroupLayout jpanelALayout = new javax.swing.GroupLayout(jpanelA);
         jpanelA.setLayout(jpanelALayout);
@@ -334,7 +345,6 @@ public class BuscarCompositor extends javax.swing.JInternalFrame {
     private javax.swing.JButton btnAceptar;
     private javax.swing.JButton btnCancelar;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JLabel jblApellidoBuscarCompositor;
     private javax.swing.JLabel jblEdadBuscarCompositor;
     private javax.swing.JLabel jblIdBuscarCompositor;
@@ -343,6 +353,7 @@ public class BuscarCompositor extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jblNumeroComposiconesBuscarCompositor;
     private javax.swing.JLabel jblSalarioBuscarCompositor;
     private javax.swing.JPanel jpanelA;
+    private javax.swing.JTable tblCancion;
     private javax.swing.JTextField txtApellido;
     private javax.swing.JTextField txtEdad;
     private javax.swing.JTextField txtId;

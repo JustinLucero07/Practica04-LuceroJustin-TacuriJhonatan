@@ -11,6 +11,8 @@ import java.util.ResourceBundle;
 import javax.swing.BorderFactory;
 import javax.swing.JOptionPane;
 import javax.swing.border.Border;
+import javax.swing.table.TableColumn;
+import javax.swing.table.TableColumnModel;
 
 /**
  *
@@ -44,6 +46,13 @@ public class BuscarCantante extends javax.swing.JInternalFrame {
         bntAceptar.setText(mensajes.getString("boton.aceptar"));
         Border borde = BorderFactory.createTitledBorder(mensajes.getString("panel.buscarcantante"));
         jpanelA.setBorder(borde);
+        TableColumnModel columnModel = tblDisco.getColumnModel();
+        TableColumn columnaCodigo = columnModel.getColumn(0);
+        columnaCodigo.setHeaderValue(mensajes.getString("ventana.codigo"));
+        TableColumn columnaNombre = columnModel.getColumn(1);
+        columnaNombre.setHeaderValue(mensajes.getString("ventana.nombre"));
+        TableColumn columnaAnio = columnModel.getColumn(2);
+        columnaAnio.setHeaderValue(mensajes.getString("ventanaDisco.aniolanzamiento"));
     }
     
     /**
@@ -81,7 +90,7 @@ public class BuscarCantante extends javax.swing.JInternalFrame {
         bntAceptar = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tblDisco = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
 
@@ -158,7 +167,7 @@ public class BuscarCantante extends javax.swing.JInternalFrame {
             }
         });
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tblDisco.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -169,7 +178,7 @@ public class BuscarCantante extends javax.swing.JInternalFrame {
                 "Codigo", "Nombre", "Año de Lanzamiento"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tblDisco);
 
         javax.swing.GroupLayout jpanelALayout = new javax.swing.GroupLayout(jpanelA);
         jpanelA.setLayout(jpanelALayout);
@@ -343,7 +352,6 @@ public class BuscarCantante extends javax.swing.JInternalFrame {
     private javax.swing.JButton bntAceptar;
     private javax.swing.JButton btnCancelar;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JLabel jblApellidoBuscarCantante;
     private javax.swing.JLabel jblEdadBuscarCantante;
     private javax.swing.JLabel jblGeneroMusical;
@@ -356,6 +364,7 @@ public class BuscarCantante extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jblNumeroSencillosBuscarCantante;
     private javax.swing.JLabel jblSalarioBuscarCantante;
     private javax.swing.JPanel jpanelA;
+    private javax.swing.JTable tblDisco;
     private javax.swing.JTextField txtApellido;
     private javax.swing.JTextField txtEdad;
     private javax.swing.JTextField txtGeneroMusical;
