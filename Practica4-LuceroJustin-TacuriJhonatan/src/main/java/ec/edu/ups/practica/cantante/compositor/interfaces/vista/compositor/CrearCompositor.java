@@ -282,7 +282,6 @@ public class CrearCompositor extends javax.swing.JInternalFrame {
             JOptionPane.showMessageDialog(this,mensajes.getString("joption.nosehanllenado")); 
         }
         
-        //hiolaaaaaaaaaaaaaaaaa
     }//GEN-LAST:event_btnAceptarActionPerformed
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
