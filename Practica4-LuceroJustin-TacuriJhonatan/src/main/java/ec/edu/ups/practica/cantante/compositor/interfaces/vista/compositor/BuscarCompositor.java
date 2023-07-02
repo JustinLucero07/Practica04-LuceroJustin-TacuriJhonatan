@@ -273,7 +273,7 @@ public class BuscarCompositor extends javax.swing.JInternalFrame {
 
     private void btnAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarActionPerformed
         if (txtId.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "No esta llenado el campo del ID ");
+            JOptionPane.showMessageDialog(this, mensajes.getString("joption.noestalleno")); 
         }else{
             Compositor compositorTempo = controladorCompositor.buscarCompositor(Integer.parseInt(txtId.getText()));
             if (compositorTempo !=null) {
@@ -287,7 +287,7 @@ public class BuscarCompositor extends javax.swing.JInternalFrame {
                 
             }else{
                 this.limpiarCampos();
-                JOptionPane.showMessageDialog(this, "El ID no existe ");
+                JOptionPane.showMessageDialog(this, mensajes.getString("joption.noexiste")); 
 
             }
         }

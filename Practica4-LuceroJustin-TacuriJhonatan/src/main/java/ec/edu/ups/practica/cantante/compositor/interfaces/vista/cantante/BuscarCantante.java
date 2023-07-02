@@ -268,7 +268,7 @@ public class BuscarCantante extends javax.swing.JInternalFrame {
     private void bntAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntAceptarActionPerformed
         // TODO add your handling code here:
         if (txtID.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "No esta llenado el campo del ID ");
+            JOptionPane.showMessageDialog(this, mensajes.getString("joption.noestalleno")); 
         }else{
             Cantante cantanteTempo = controladorCantante.buscarCantante(Integer.parseInt(txtID.getText()));
             if (cantanteTempo !=null) {
@@ -286,7 +286,7 @@ public class BuscarCantante extends javax.swing.JInternalFrame {
                 
             }else{
                 this.limpiarCampos();
-                JOptionPane.showMessageDialog(this, "El ID no existe ");
+                JOptionPane.showMessageDialog(this, mensajes.getString("joption.noexiste")); 
 
             }
         }

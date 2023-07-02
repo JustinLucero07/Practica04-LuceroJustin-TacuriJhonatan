@@ -282,7 +282,7 @@ public class EliminarCompositor extends javax.swing.JInternalFrame {
 
     private void btnAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarActionPerformed
         if (txtId.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "No esta llenado el campo del ID ");
+            JOptionPane.showMessageDialog(this, mensajes.getString("joption.noestalleno")); 
         }else{
             Compositor compositorTempo = controladorCompositor.buscarCompositor(Integer.parseInt(txtId.getText()));
             if (compositorTempo !=null) {
@@ -296,7 +296,7 @@ public class EliminarCompositor extends javax.swing.JInternalFrame {
 
             }else{
                 this.limpiarCampos();
-                JOptionPane.showMessageDialog(this, "El ID no existe ");
+                JOptionPane.showMessageDialog(this, mensajes.getString("joption.noexiste")); 
 
             }
         }
@@ -309,14 +309,14 @@ public class EliminarCompositor extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnCancelarActionPerformed
 
     private void btnEliminarCompositorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarCompositorActionPerformed
-        int respuesta=JOptionPane.showConfirmDialog(this, "¿Estas seguro que deseas eliminar el cantante? \n Nombre : "+txtNombre.getText()+"\n ID : "+ txtId.getText());
+        int respuesta=JOptionPane.showConfirmDialog(this, mensajes.getString("joption.preguntaeliminarcompo")); 
         if (respuesta==JOptionPane.YES_OPTION) {
             controladorCompositor.elimininarCompo(controladorCompositor.buscarCompositor(Integer.parseInt(txtId.getText())));
-            JOptionPane.showMessageDialog(this, "El cantante a sido eliminado con existo ");
+            JOptionPane.showMessageDialog(this, mensajes.getString("joption.seeliminoelcompo")); 
             txtId.setText("");
             this.limpiarCampos();
         }else{
-            JOptionPane.showMessageDialog(this, "No se eliminado con exito");
+            JOptionPane.showMessageDialog(this, mensajes.getString("joption.noseelimino")); 
         }
     }//GEN-LAST:event_btnEliminarCompositorActionPerformed
 

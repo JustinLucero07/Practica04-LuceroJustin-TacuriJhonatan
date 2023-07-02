@@ -88,6 +88,7 @@ public class ActualizarCantante extends javax.swing.JInternalFrame {
         jblNumeroSencillosActualizarCantante = new javax.swing.JLabel();
         bntBuscar = new javax.swing.JButton();
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
         addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
             public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
                 formInternalFrameActivated(evt);
@@ -311,7 +312,7 @@ public class ActualizarCantante extends javax.swing.JInternalFrame {
         cantante.setDiscos(listaDiscos);
         controladorCantante.actualizar(cantante);
         this.limpiarCampos();
-        JOptionPane.showMessageDialog(this, "Se a actualizado exitosamente el cantante");
+        JOptionPane.showMessageDialog(this, mensajes.getString("joption.seactualizoelcantante")); 
         System.out.println(controladorCantante.verCantantes());
         this.visibilidad(false);
         bntActualizar.setEnabled(false);
@@ -331,7 +332,7 @@ public class ActualizarCantante extends javax.swing.JInternalFrame {
     private void bntBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntBuscarActionPerformed
         // TODO add your handling code here:
         if (txtID.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "No estan lleno el campo ID");
+            JOptionPane.showMessageDialog(this, mensajes.getString("joption.noestalleno")); 
         }else{
             Cantante cantante = controladorCantante.buscarCantante(Integer.parseInt(txtID.getText()));
             
@@ -352,7 +353,7 @@ public class ActualizarCantante extends javax.swing.JInternalFrame {
                 bntBuscar.setEnabled(false);
                 listaDiscos = cantante.getDiscos();
             }else{
-                JOptionPane.showMessageDialog(this, "El ID "+ txtID.getText() + " no existe ");
+                JOptionPane.showMessageDialog(this, mensajes.getString("joption.noexiste")); 
             }
         }
     }//GEN-LAST:event_bntBuscarActionPerformed

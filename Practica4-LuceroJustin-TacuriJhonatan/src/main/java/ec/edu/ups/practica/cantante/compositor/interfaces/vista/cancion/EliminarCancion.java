@@ -434,7 +434,7 @@ public class EliminarCancion extends javax.swing.JInternalFrame {
 
     private void btnAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarActionPerformed
         if (txtId.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "No esta llenado el campo del ID ");
+            JOptionPane.showMessageDialog(this, mensajes.getString("joption.noestalleno")); 
         }else{
             Compositor compositorTempo = controladorCompositor.buscarCompositor(Integer.parseInt(txtId.getText()));
             if (compositorTempo !=null) {
@@ -448,7 +448,7 @@ public class EliminarCancion extends javax.swing.JInternalFrame {
 
             }else{
                 this.limpiarCampos();
-                JOptionPane.showMessageDialog(this, "El ID no existe ");
+                JOptionPane.showMessageDialog(this, mensajes.getString("joption.noexiste")); 
             }
         }
     }//GEN-LAST:event_btnAceptarActionPerformed
@@ -472,7 +472,7 @@ public class EliminarCancion extends javax.swing.JInternalFrame {
     private void btnBuscarCancionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarCancionActionPerformed
 
         if(txtCodigoCancion.getText().isEmpty()){
-            JOptionPane.showMessageDialog(this, "El campo del codigo no esta lleno");
+            JOptionPane.showMessageDialog(this, mensajes.getString("joption.noestallenocodigo")); 
         }else{
             Cancion cancion = controladorCompositor.buscarCancion(controladorCompositor.buscarCompositor(Integer.parseInt(txtId.getText())), Integer.parseInt(txtCodigoCancion.getText()));
             if(cancion!=null){
@@ -481,7 +481,7 @@ public class EliminarCancion extends javax.swing.JInternalFrame {
                 txtTitulo.setText(cancion.getTitulo());
             }else{
                 this.limpiarCamposCancion();
-                JOptionPane.showMessageDialog(this, "La cancion no exite");
+                JOptionPane.showMessageDialog(this, mensajes.getString("joption.lacancionnoexiste")); 
             }
         }
 
@@ -495,14 +495,14 @@ public class EliminarCancion extends javax.swing.JInternalFrame {
 
     private void btnEliminarCancionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarCancionActionPerformed
         
-        int respuesta=JOptionPane.showConfirmDialog(this, "¿Estas seguro que deseas eliminar la cancion?");
+        int respuesta=JOptionPane.showConfirmDialog(this, mensajes.getString("joption.eliminarcancion")); 
         if (respuesta==JOptionPane.YES_OPTION) {
             controladorCompositor.eliminarCancion(controladorCompositor.buscarCompositor(Integer.parseInt(txtId.getText())), Integer.parseInt(txtCodigoCancion.getText())); 
-            JOptionPane.showMessageDialog(this, "La cancion a sido eliminada con exito");
+            JOptionPane.showMessageDialog(this, mensajes.getString("joption.seeliminolacancion")); 
             this.limpiarCamposCancion();
             this.limpiarCampos();
         }else{
-            JOptionPane.showMessageDialog(this, "La cancion no a sido eliminada");
+            JOptionPane.showMessageDialog(this, mensajes.getString("joption.noseeliminolacancion")); 
         }
     }//GEN-LAST:event_btnEliminarCancionActionPerformed
 

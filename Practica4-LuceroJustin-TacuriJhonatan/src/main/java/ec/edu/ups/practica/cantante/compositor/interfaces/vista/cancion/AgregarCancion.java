@@ -409,7 +409,7 @@ public class AgregarCancion extends javax.swing.JInternalFrame {
 
     private void btnAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarActionPerformed
         if (txtId.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "No esta llenado el campo del ID ");
+            JOptionPane.showMessageDialog(this, mensajes.getString("joption.noestalleno")); 
         }else{
             Compositor compositorTempo = controladorCompositor.buscarCompositor(Integer.parseInt(txtId.getText()));
             if (compositorTempo !=null) {
@@ -423,7 +423,7 @@ public class AgregarCancion extends javax.swing.JInternalFrame {
 
             }else{
                 this.limpiarCampos();
-                JOptionPane.showMessageDialog(this, "El ID no existe ");
+                JOptionPane.showMessageDialog(this, mensajes.getString("joption.noexiste")); 
 
             }
         }
@@ -440,15 +440,15 @@ public class AgregarCancion extends javax.swing.JInternalFrame {
                 Cancion cancion = new Cancion(codigo, titulo, letra, tiempo);
                 controladorCompositor.agregarCancion(cancion, controladorCompositor.buscarCompositor(Integer.parseInt(txtId.getText())));
                 System.out.println(controladorCompositor.verCompositores());
-                JOptionPane.showMessageDialog(this, "Se agrego exitosamnete la cacion");
+                JOptionPane.showMessageDialog(this, mensajes.getString("joption.seagrego"));
                 this.limpiarCampos();
                 this.limpiarCamposCancion();
             }else{
-                JOptionPane.showMessageDialog(this, "El Codigo de la Cancion ya existe");
+                JOptionPane.showMessageDialog(this, mensajes.getString("joption.lacancionyaexsite")); 
             }
                 
         }else{
-            JOptionPane.showMessageDialog(this, "No estan llenos todos los campos");
+            JOptionPane.showMessageDialog(this, mensajes.getString("joption.nosehanllenado")); 
         }
         
     }//GEN-LAST:event_btnAgregarActionPerformed

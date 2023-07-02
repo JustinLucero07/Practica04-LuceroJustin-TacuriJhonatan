@@ -285,7 +285,7 @@ public class ActualizarCompositor extends javax.swing.JInternalFrame {
 
     private void btnAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarActionPerformed
         if (txtId.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "No esta llenado el campo del ID ");
+            JOptionPane.showMessageDialog(this, mensajes.getString("joption.noestalleno")); 
         }else{
             Compositor compositorTempo = controladorCompositor.buscarCompositor(Integer.parseInt(txtId.getText()));
             if (compositorTempo !=null) {
@@ -299,7 +299,7 @@ public class ActualizarCompositor extends javax.swing.JInternalFrame {
 
             }else{
                 this.limpiarCampos();
-                JOptionPane.showMessageDialog(this, "El ID no existe ");
+                JOptionPane.showMessageDialog(this, mensajes.getString("joption.noexiste")); 
 
             }
         }
@@ -323,7 +323,7 @@ public class ActualizarCompositor extends javax.swing.JInternalFrame {
         //cantante.setDiscos(listaDiscos);
         controladorCompositor.actualizarCompositor(compositorAc);
         this.limpiarCampos();
-        JOptionPane.showMessageDialog(this, "Se a actualizado exitosamente el cantante");
+        JOptionPane.showMessageDialog(this, mensajes.getString("joption.actualizocompositro")); 
         System.out.println(controladorCompositor.verCompositores());
         this.visibilidad(false);
         btnActualizarCompositor.setEnabled(false);

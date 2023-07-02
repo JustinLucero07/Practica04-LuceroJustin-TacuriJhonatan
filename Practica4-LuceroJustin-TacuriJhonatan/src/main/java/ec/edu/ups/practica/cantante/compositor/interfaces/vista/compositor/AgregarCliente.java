@@ -512,7 +512,7 @@ public class AgregarCliente extends javax.swing.JInternalFrame {
 
     private void btnAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarActionPerformed
         if (txtId.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "No esta llenado el campo del ID ");
+            JOptionPane.showMessageDialog(this, mensajes.getString("joption.noestalleno")); 
         }else{
             Compositor compositorTempo = controladorCompositor.buscarCompositor(Integer.parseInt(txtId.getText()));
             if (compositorTempo !=null) {
@@ -525,7 +525,7 @@ public class AgregarCliente extends javax.swing.JInternalFrame {
 
             }else{
                 this.limpiarCampos();
-                JOptionPane.showMessageDialog(this, "El ID no existe ");
+                JOptionPane.showMessageDialog(this, mensajes.getString("joption.noexiste")); 
 
             }
         }
@@ -538,7 +538,7 @@ public class AgregarCliente extends javax.swing.JInternalFrame {
     private void bntAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntAceptarActionPerformed
         // TODO add your handling code here:
         if (txtID.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "No esta llenado el campo del ID ");
+            JOptionPane.showMessageDialog(this, mensajes.getString("joption.noestalleno"));
         }else{
             Cantante cantanteTempo = controladorCantante.buscarCantante(Integer.parseInt(txtID.getText()));
             if (cantanteTempo !=null) {
@@ -555,7 +555,7 @@ public class AgregarCliente extends javax.swing.JInternalFrame {
 
             }else{
                 this.limpiarCamposCantante();
-                JOptionPane.showMessageDialog(this, "El ID no existe ");
+                JOptionPane.showMessageDialog(this, mensajes.getString("joption.noexiste"));
 
             }
         }
@@ -570,10 +570,10 @@ public class AgregarCliente extends javax.swing.JInternalFrame {
 
     private void btnAgregarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarClienteActionPerformed
         if(txtID.getText().isEmpty() || txtId.getText().isEmpty()){
-            JOptionPane.showMessageDialog(this, "Los campos de los ID no estan llenos");
+            JOptionPane.showMessageDialog(this, mensajes.getString("joption.camposnollenos")); 
         }else{
             controladorCompositor.agregarClienteCan(controladorCompositor.buscarCompositor(Integer.parseInt(txtId.getText())), controladorCantante.buscarCantante(Integer.parseInt(txtID.getText()))); 
-            JOptionPane.showMessageDialog(this, "Se agrego exitosamente el cantante como cliente de compositor");
+            JOptionPane.showMessageDialog(this, mensajes.getString("joption.seagregolciente")); 
             System.out.println(controladorCompositor.verCompositores());
             this.limpiarCampos();
             this.limpiarCamposCantante();

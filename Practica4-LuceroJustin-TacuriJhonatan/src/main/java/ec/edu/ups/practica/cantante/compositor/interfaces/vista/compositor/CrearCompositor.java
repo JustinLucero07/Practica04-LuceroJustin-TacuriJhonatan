@@ -273,13 +273,13 @@ public class CrearCompositor extends javax.swing.JInternalFrame {
                 //cantante.agregarDisco(disco);
                 controladorCompositor.crearCompositor(compositor); 
                 this.limpiarCampos();
-                JOptionPane.showMessageDialog(this, "Se a creado exitosamente el compositor");
+                JOptionPane.showMessageDialog(this, mensajes.getString("joption.secreocompositor"));
                 System.out.println(controladorCompositor.verCompositores());
             }else{
-                JOptionPane.showMessageDialog(this, "El ID ya existe");
+                JOptionPane.showMessageDialog(this, mensajes.getString("joption.elid")); 
             }
         }else{
-            JOptionPane.showMessageDialog(this,"No estan llenos todos los campos ");
+            JOptionPane.showMessageDialog(this,mensajes.getString("joption.nosehanllenado")); 
         }
     }//GEN-LAST:event_btnAceptarActionPerformed
 

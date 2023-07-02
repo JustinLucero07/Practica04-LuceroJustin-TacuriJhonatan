@@ -367,7 +367,7 @@ public class EliminarDisco extends javax.swing.JInternalFrame {
 
     private void bntEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntEliminarActionPerformed
         // TODO add your handling code here:
-        int num = JOptionPane.showConfirmDialog(this, "Esta seguro que desea elimnar el disco "+ disco.getNombre());
+        int num = JOptionPane.showConfirmDialog(this, mensajes.getString("joption.eliminardisco")+ disco.getNombre()); 
         if (num == JOptionPane.YES_OPTION) {
             cantanteTempo.eliminarDisco(Integer.parseInt(txtCodigo4.getText()));
             bntEliminar.setEnabled(false);
@@ -378,7 +378,7 @@ public class EliminarDisco extends javax.swing.JInternalFrame {
             txtAnioLanzamiento4.setText("");
             txtCodigo4.setText("");
         }else{
-            JOptionPane.showMessageDialog(this,"No se a eliminado correctamente ");
+            JOptionPane.showMessageDialog(this,mensajes.getString("joption.noseelimino")); 
             txtNombreDisco4.setText("");
             txtAnioLanzamiento4.setText("");
             txtCodigo4.setText("");

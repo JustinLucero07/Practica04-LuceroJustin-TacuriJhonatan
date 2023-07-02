@@ -267,13 +267,13 @@ public class CrearCantante extends javax.swing.JInternalFrame {
                 //cantante.agregarDisco(disco);
                 controladorCantante.registrar(cantante); 
                 this.limpiarCampos();
-                JOptionPane.showMessageDialog(this, "Se a creado exitosamente el cantante");
+                JOptionPane.showMessageDialog(this, mensajes.getString("joption.secreocantante")); 
                 System.out.println(controladorCantante.verCantantes());
             }else{
-                JOptionPane.showMessageDialog(this, "El ID ya existe");
+                JOptionPane.showMessageDialog(this, mensajes.getString("joption.elid")); 
             }
         }else{
-            JOptionPane.showMessageDialog(this,"No estan llenos todos los campos ");
+            JOptionPane.showMessageDialog(this,mensajes.getString("joption.nosehanllenado")); 
         }
     }//GEN-LAST:event_btnCrearCantanteActionPerformed
 

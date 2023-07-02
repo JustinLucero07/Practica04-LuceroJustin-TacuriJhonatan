@@ -278,14 +278,14 @@ public class EliminarCantante extends javax.swing.JInternalFrame {
 
     private void bntEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntEliminarActionPerformed
         // TODO add your handling code here:
-        int respuesta=JOptionPane.showConfirmDialog(this, "¿Estas seguro que deseas eliminar el cantante? \n Nombre : "+txtNombre.getText()+"\n ID : "+ txtID.getText());
+        int respuesta=JOptionPane.showConfirmDialog(this, mensajes.getString("joption.eliminarcantante")); 
         if (respuesta==JOptionPane.YES_OPTION) {
             controladorCantante.eliminar(controladorCantante.buscarCantante(Integer.parseInt(txtID.getText())));
-            JOptionPane.showMessageDialog(this, "El cantante a sido eliminado con existo ");
+            JOptionPane.showMessageDialog(this, mensajes.getString("joption.cantnteeliminado")); 
             txtID.setText("");
             this.limpiarCampos();
         }else{
-            JOptionPane.showMessageDialog(this, "No se eliminado con exito");
+            JOptionPane.showMessageDialog(this, mensajes.getString("joption.noseeliminocantante")); 
         }
     }//GEN-LAST:event_bntEliminarActionPerformed
     
@@ -300,7 +300,7 @@ public class EliminarCantante extends javax.swing.JInternalFrame {
     private void bntBuscarrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntBuscarrActionPerformed
         // TODO add your handling code here:
         if (txtID.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "No esta llenado el campo del ID ");
+            JOptionPane.showMessageDialog(this, mensajes.getString("joption.noestalleno")); 
         }else{
             Cantante cantanteTempo = controladorCantante.buscarCantante(Integer.parseInt(txtID.getText()));
             if (cantanteTempo !=null) {
@@ -318,7 +318,7 @@ public class EliminarCantante extends javax.swing.JInternalFrame {
                 bntEliminar.setEnabled(true);
             }else{
                 this.limpiarCampos();
-                JOptionPane.showMessageDialog(this, "El ID no existe ");
+                JOptionPane.showMessageDialog(this, mensajes.getString("joption.noexiste")); 
                
             }
         }

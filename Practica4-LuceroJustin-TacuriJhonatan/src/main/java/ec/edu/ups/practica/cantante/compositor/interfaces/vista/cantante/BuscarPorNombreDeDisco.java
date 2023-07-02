@@ -325,13 +325,13 @@ public class BuscarPorNombreDeDisco extends javax.swing.JInternalFrame {
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
         // TODO add your handling code here:
         if (txtNombreDisco.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "El campo esta vacion");
+            JOptionPane.showMessageDialog(this, mensajes.getString("joption.nollenoelnombre")); 
         }else{
             cantanteTempo = controladorCantante.buscarporDisco(txtNombreDisco.getText());
             if (cantanteTempo!=null) {
                 
             }else{
-                JOptionPane.showConfirmDialog(this, "El nombre de la cancion no existe en ningun cantante ");
+                JOptionPane.showConfirmDialog(this,mensajes.getString("joption.elnombrenoexiste")); 
                 this.limpiarCampos();
             }
         }

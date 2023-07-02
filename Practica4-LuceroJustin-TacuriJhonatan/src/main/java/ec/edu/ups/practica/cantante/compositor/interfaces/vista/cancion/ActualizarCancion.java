@@ -433,7 +433,7 @@ public class ActualizarCancion extends javax.swing.JInternalFrame {
 
     private void btnAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarActionPerformed
         if (txtId.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "No esta llenado el campo del ID ");
+            JOptionPane.showMessageDialog(this, mensajes.getString("joption.noestalleno"));
         }else{
             Compositor compositorTempo = controladorCompositor.buscarCompositor(Integer.parseInt(txtId.getText()));
             if (compositorTempo !=null) {
@@ -447,7 +447,7 @@ public class ActualizarCancion extends javax.swing.JInternalFrame {
 
             }else{
                 this.limpiarCampos();
-                JOptionPane.showMessageDialog(this, "El ID no existe ");
+                JOptionPane.showMessageDialog(this, mensajes.getString("joption.noexiste")); 
 
             }
         }
@@ -471,7 +471,7 @@ public class ActualizarCancion extends javax.swing.JInternalFrame {
 
     private void btnBuscarCancionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarCancionActionPerformed
         if(txtCodigoCancion.getText().isEmpty()){
-            JOptionPane.showMessageDialog(this, "El campo del codigo no esta lleno");
+            JOptionPane.showMessageDialog(this, mensajes.getString("joption.noestalleno")); 
         }else{
             Cancion cancion = controladorCompositor.buscarCancion(controladorCompositor.buscarCompositor(Integer.parseInt(txtId.getText())), Integer.parseInt(txtCodigoCancion.getText())); 
             if(cancion!=null){
@@ -484,7 +484,7 @@ public class ActualizarCancion extends javax.swing.JInternalFrame {
                 txtTitulo.setEnabled(true);
             }else{
                 this.limpiarCamposCancion();
-                JOptionPane.showMessageDialog(this, "La cancion no exite");
+                JOptionPane.showMessageDialog(this, mensajes.getString("joption.lacancionnoexiste")); 
             }  
         }
     }//GEN-LAST:event_btnBuscarCancionActionPerformed
@@ -500,7 +500,7 @@ public class ActualizarCancion extends javax.swing.JInternalFrame {
         txtDuracionCancion.setEnabled(false);
         txtLetra.setEnabled(false);
         txtTitulo.setEnabled(false);
-        JOptionPane.showMessageDialog(this, "Se actualizo correctamente la cancion");
+        JOptionPane.showMessageDialog(this, mensajes.getString("joption.seactualizo")); 
         System.out.println(controladorCompositor.verCompositores());
         
         this.limpiarCampos();

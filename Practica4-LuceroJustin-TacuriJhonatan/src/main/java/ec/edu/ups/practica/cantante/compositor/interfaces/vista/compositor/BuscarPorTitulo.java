@@ -284,7 +284,7 @@ public class BuscarPorTitulo extends javax.swing.JInternalFrame {
 
     private void btnAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarActionPerformed
         if (txtTituloCancion.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "No esta llenado el campo del ID ");
+            JOptionPane.showMessageDialog(this, mensajes.getString("joption.notitulo")); 
         }else{
             Compositor compositorTempo = controladorCompositor.buscarPorTituloCancion(txtTituloCancion.getText()); 
             if (compositorTempo !=null) {
@@ -299,7 +299,7 @@ public class BuscarPorTitulo extends javax.swing.JInternalFrame {
 
             }else{
                 this.limpiarCampos();
-                JOptionPane.showMessageDialog(this, "El ID no existe ");
+                JOptionPane.showMessageDialog(this, mensajes.getString("joption.noexistetitulo"));  
 
             }
         }
