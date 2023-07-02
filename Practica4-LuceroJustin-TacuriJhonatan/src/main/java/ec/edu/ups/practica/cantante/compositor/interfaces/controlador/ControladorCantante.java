@@ -17,7 +17,7 @@ public class ControladorCantante {
     //objetos modelo
     private Cantante cantante;
     private Disco disco;
-    //objetos DAO
+    //objetos DAOa
     private ICantanteDao cantanteDao;
     
 
