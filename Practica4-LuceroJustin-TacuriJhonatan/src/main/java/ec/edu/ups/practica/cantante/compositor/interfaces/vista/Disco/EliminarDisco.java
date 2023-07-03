@@ -80,6 +80,7 @@ public class EliminarDisco extends javax.swing.JInternalFrame {
         bntBuscarDisco = new javax.swing.JButton();
         bntEliminar = new javax.swing.JButton();
 
+        jpanelE.setBackground(new java.awt.Color(255, 204, 153));
         jpanelE.setBorder(javax.swing.BorderFactory.createTitledBorder("ELIMINAR DISCO"));
 
         jblIdEliminarDisco.setText("Buscar cantante para encontar disco : ");

@@ -97,6 +97,7 @@ public class EliminarCancion extends javax.swing.JInternalFrame {
 
         jpanelA.setBorder(javax.swing.BorderFactory.createTitledBorder("ELIMINAR CANCION"));
 
+        jpanelB.setBackground(new java.awt.Color(204, 255, 255));
         jpanelB.setBorder(javax.swing.BorderFactory.createTitledBorder("BUSCAR COMPOSITOR"));
 
         jblIdEliminarCancion.setText("ID:");
@@ -174,6 +175,7 @@ public class EliminarCancion extends javax.swing.JInternalFrame {
             }
         });
 
+        jpanelC.setBackground(new java.awt.Color(204, 255, 255));
         jpanelC.setBorder(javax.swing.BorderFactory.createTitledBorder("BUSCAR CANCION"));
 
         jblCodigoEliminarCancion.setText("Codigo:");

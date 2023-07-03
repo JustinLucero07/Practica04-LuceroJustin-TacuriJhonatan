@@ -79,6 +79,7 @@ public class BuscarDisco extends javax.swing.JInternalFrame {
         bntCancelar4 = new javax.swing.JButton();
         bntBuscarDisco = new javax.swing.JButton();
 
+        jpanelB.setBackground(new java.awt.Color(255, 204, 153));
         jpanelB.setBorder(javax.swing.BorderFactory.createTitledBorder("BUSCAR DISCO"));
 
         jblIdBuscarDisco.setText("Buscar cantante para encontar disco : ");
