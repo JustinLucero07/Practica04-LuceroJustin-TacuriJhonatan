@@ -5,12 +5,16 @@
 package ec.edu.ups.practica.cantante.compositor.interfaces.vista.compositor;
 
 import ec.edu.ups.practica.cantante.compositor.interfaces.controlador.ControladorCompositor;
+import ec.edu.ups.practica.cantante.compositor.interfaces.modelo.Cancion;
 import ec.edu.ups.practica.cantante.compositor.interfaces.modelo.Compositor;
+import ec.edu.ups.practica.cantante.compositor.interfaces.modelo.Disco;
+import java.util.List;
 import java.util.Locale;
 import java.util.ResourceBundle;
 import javax.swing.BorderFactory;
 import javax.swing.JOptionPane;
 import javax.swing.border.Border;
+import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
 import javax.swing.table.TableColumnModel;
 
@@ -21,6 +25,7 @@ import javax.swing.table.TableColumnModel;
 public class BuscarCompositor extends javax.swing.JInternalFrame {
     private ControladorCompositor controladorCompositor;
     private ResourceBundle mensajes;
+    private Compositor compositorTempo;
 
     /**
      * Creates new form BuscarCompositor
@@ -217,7 +222,7 @@ public class BuscarCompositor extends javax.swing.JInternalFrame {
         jScrollPane1.setViewportView(tblCancion);
 
         jpanelA.add(jScrollPane1);
-        jScrollPane1.setBounds(420, 30, 430, 320);
+        jScrollPane1.setBounds(410, 30, 430, 320);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Imgen.jpg"))); // NOI18N
         jLabel1.setToolTipText("");
@@ -270,7 +275,7 @@ public class BuscarCompositor extends javax.swing.JInternalFrame {
         if (txtId.getText().isEmpty()) {
             JOptionPane.showMessageDialog(this, mensajes.getString("joption.noestalleno")); 
         }else{
-            Compositor compositorTempo = controladorCompositor.buscarCompositor(Integer.parseInt(txtId.getText()));
+            compositorTempo = controladorCompositor.buscarCompositor(Integer.parseInt(txtId.getText()));
             if (compositorTempo !=null) {
                 txtNombre.setText(compositorTempo.getNombre());
                 txtApellido.setText(compositorTempo.getApellido());
@@ -279,7 +284,7 @@ public class BuscarCompositor extends javax.swing.JInternalFrame {
                 txtNacionalidad.setText(compositorTempo.getNacionalidad());
                 txtSalario.setText(String.valueOf(compositorTempo.calcularSalario()));
                 txtNumeroComposiciones.setText(String.valueOf(compositorTempo.getNumeroDeComposiciones()));
-                
+                this.actualizarTabla();
             }else{
                 this.limpiarCampos();
                 JOptionPane.showMessageDialog(this, mensajes.getString("joption.noexiste")); 
@@ -292,8 +297,28 @@ public class BuscarCompositor extends javax.swing.JInternalFrame {
         txtId.setText("");
         this.limpiarCampos();
         this.setVisible(false);
+        DefaultTableModel modelo = (DefaultTableModel)this.tblCancion.getModel();
+        modelo.setNumRows(0);
+        this.tblCancion.setModel(modelo);
     }//GEN-LAST:event_btnCancelarActionPerformed
-
+    private void actualizarTabla(){
+        DefaultTableModel modelo = (DefaultTableModel)this.tblCancion.getModel();
+        modelo.setNumRows(0);
+        List <Cancion> listaCan = compositorTempo.getCancionesTop100Billboard();
+        //if (listaPersonas!=null) {
+            for (Cancion listaCa : listaCan) {
+                int cod = listaCa.getCodigo();
+                String nom = listaCa.getTitulo();
+                String letra= listaCa.getLetra();
+                double duracion = listaCa.getTiempoEnMinutos();
+                Object[] rowDate = {cod,nom,letra,duracion};
+                modelo.addRow(rowDate);
+            }
+            this.tblCancion.setModel(modelo);
+        //}else{
+          //  JOptionPane.showMessageDialog(this, "No se ha ingresado ningun cantante aun");
+        //}
+    }
     
     private void limpiarCampos(){
         txtId.setText("");

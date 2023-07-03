@@ -6,11 +6,14 @@ package ec.edu.ups.practica.cantante.compositor.interfaces.vista.cantante;
 
 import ec.edu.ups.practica.cantante.compositor.interfaces.controlador.ControladorCantante;
 import ec.edu.ups.practica.cantante.compositor.interfaces.modelo.Cantante;
+import ec.edu.ups.practica.cantante.compositor.interfaces.modelo.Disco;
+import java.util.List;
 import java.util.Locale;
 import java.util.ResourceBundle;
 import javax.swing.BorderFactory;
 import javax.swing.JOptionPane;
 import javax.swing.border.Border;
+import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
 import javax.swing.table.TableColumnModel;
 
@@ -21,6 +24,7 @@ import javax.swing.table.TableColumnModel;
 public class BuscarCantante extends javax.swing.JInternalFrame {
     private ControladorCantante controladorCantante;
     private ResourceBundle mensajes;
+    private Cantante cantanteTempo;
     /**
      * Creates new form EliminarCantante
      */
@@ -266,7 +270,7 @@ public class BuscarCantante extends javax.swing.JInternalFrame {
         if (txtID.getText().isEmpty()) {
             JOptionPane.showMessageDialog(this, mensajes.getString("joption.noestalleno")); 
         }else{
-            Cantante cantanteTempo = controladorCantante.buscarCantante(Integer.parseInt(txtID.getText()));
+            cantanteTempo = controladorCantante.buscarCantante(Integer.parseInt(txtID.getText()));
             if (cantanteTempo !=null) {
                 txtNombre.setText(cantanteTempo.getNombre());
                 txtApellido.setText(cantanteTempo.getApellido());
@@ -279,6 +283,7 @@ public class BuscarCantante extends javax.swing.JInternalFrame {
                 txtNumeroSencillos.setText(String.valueOf(cantanteTempo.getNumeroDeSencillos()));
                 txtNumeroConciertos.setText(String.valueOf(cantanteTempo.getNumeroDeConciertos()));
                 txtNumeroGiras.setText(String.valueOf(cantanteTempo.getNumeroDeGiras()));
+                this.actualizarTabla();
                 
             }else{
                 this.limpiarCampos();
@@ -306,13 +311,34 @@ public class BuscarCantante extends javax.swing.JInternalFrame {
         txtID.setText("");
         this.limpiarCampos();
         this.setVisible(false);
+        DefaultTableModel modelo = (DefaultTableModel)this.tblDisco.getModel();
+        modelo.setNumRows(0);
+        this.tblDisco.setModel(modelo);
 
     }//GEN-LAST:event_btnCancelarActionPerformed
 
     private void txtEdadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEdadActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtEdadActionPerformed
-
+    
+    private void actualizarTabla(){
+        DefaultTableModel modelo = (DefaultTableModel)this.tblDisco.getModel();
+        modelo.setNumRows(0);
+        List <Disco> listaDico = cantanteTempo.getDiscos();
+        //if (listaPersonas!=null) {
+            for (Disco listaDicos : listaDico) {
+                int cod = listaDicos.getCodigo();
+                String nom = listaDicos.getNombre();
+                int anio = listaDicos.getAnioDeLanzamiento();
+                Object[] rowDate = {cod,nom,anio};
+                modelo.addRow(rowDate);
+            }
+            this.tblDisco.setModel(modelo);
+        //}else{
+          //  JOptionPane.showMessageDialog(this, "No se ha ingresado ningun cantante aun");
+        //}
+    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bntAceptar;

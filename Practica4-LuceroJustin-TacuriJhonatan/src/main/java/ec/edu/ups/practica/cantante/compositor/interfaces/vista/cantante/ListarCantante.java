@@ -167,6 +167,7 @@ public class ListarCantante extends javax.swing.JInternalFrame {
     private void bntSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntSalirActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
+        
     }//GEN-LAST:event_bntSalirActionPerformed
     private void actualizarTabla(){
         DefaultTableModel modelo = (DefaultTableModel)this.tblCanatntes.getModel();
