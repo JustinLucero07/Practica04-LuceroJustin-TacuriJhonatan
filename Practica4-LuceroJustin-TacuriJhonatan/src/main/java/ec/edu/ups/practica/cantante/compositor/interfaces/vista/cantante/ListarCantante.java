@@ -180,19 +180,16 @@ public class ListarCantante extends javax.swing.JInternalFrame {
                 String apellido = listaPersona.getApellido();
                 int edad = listaPersona.getEdad();
                 String nacionalidad = listaPersona.getNacionalidad();
-                double salario = listaPersona.calcularSalario();
+                double salario = Math.round(listaPersona.calcularSalario()*100.0)/100.0;
                 String nombreArtistico = listaPersona.getNombreArtistico();
                 String genero = listaPersona.getGeneroMusical();
-                //int numeroSencillos = listaPersona.getNumeroDeSencillos();
-                //int numeroConciertos =listaPersona.getNumeroDeConciertos();
-                //int numeroGiras = listaPersona.getNumeroDeGiras();
-                Object[] rowDate = {id,nombre,apellido,edad,nacionalidad,salario,nombreArtistico,genero};
+                int numeroSencillos = listaPersona.getNumeroDeSencillos();
+                int numeroConciertos =listaPersona.getNumeroDeConciertos();
+                int numeroGiras = listaPersona.getNumeroDeGiras();
+                Object[] rowDate = {id,nombre,apellido,edad,nacionalidad,salario,nombreArtistico,genero,numeroSencillos,numeroConciertos,numeroGiras};
                 modelo.addRow(rowDate);
             }
             this.tblCanatntes.setModel(modelo);
-        //}else{
-          //  JOptionPane.showMessageDialog(this, "No se ha ingresado ningun cantante aun");
-        //}
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
