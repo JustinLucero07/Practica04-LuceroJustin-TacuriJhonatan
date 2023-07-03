@@ -88,6 +88,7 @@ public class ActualizarCantante extends javax.swing.JInternalFrame {
         jblNumeroSencillosActualizarCantante = new javax.swing.JLabel();
         bntBuscar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
         addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
@@ -109,18 +110,39 @@ public class ActualizarCantante extends javax.swing.JInternalFrame {
         });
 
         jpanelA.setBorder(javax.swing.BorderFactory.createTitledBorder("ACTUALZIAR CANTANTE"));
+        jpanelA.setLayout(null);
 
         txtNumeroSencillos.setEnabled(false);
+        jpanelA.add(txtNumeroSencillos);
+        txtNumeroSencillos.setBounds(280, 340, 164, 22);
 
         jblNumeroConciertosActualizarCantante.setText("Numero de Conciertos:");
+        jpanelA.add(jblNumeroConciertosActualizarCantante);
+        jblNumeroConciertosActualizarCantante.setBounds(66, 397, 133, 16);
 
         txtNumeroConciertos.setEnabled(false);
+        jpanelA.add(txtNumeroConciertos);
+        txtNumeroConciertos.setBounds(280, 390, 164, 22);
 
         jblNumeroGiras.setText("Numero de Giras:");
+        jpanelA.add(jblNumeroGiras);
+        jblNumeroGiras.setBounds(66, 446, 133, 16);
 
         txtNumeroGiras.setEnabled(false);
+        jpanelA.add(txtNumeroGiras);
+        txtNumeroGiras.setBounds(280, 440, 164, 22);
 
         jblIdActualizarCantante.setText("ID:");
+        jpanelA.add(jblIdActualizarCantante);
+        jblIdActualizarCantante.setBounds(72, 37, 14, 16);
+
+        txtID.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtIDActionPerformed(evt);
+            }
+        });
+        jpanelA.add(txtID);
+        txtID.setBounds(280, 30, 164, 22);
 
         bntActualizar.setText("Actualizar");
         bntActualizar.setEnabled(false);
@@ -129,8 +151,12 @@ public class ActualizarCantante extends javax.swing.JInternalFrame {
                 bntActualizarActionPerformed(evt);
             }
         });
+        jpanelA.add(bntActualizar);
+        bntActualizar.setBounds(341, 526, 82, 23);
 
         jblNombreActualizarCantante.setText("Nombre:");
+        jpanelA.add(jblNombreActualizarCantante);
+        jblNombreActualizarCantante.setBounds(72, 80, 58, 16);
 
         txtNombre.setEnabled(false);
         txtNombre.addActionListener(new java.awt.event.ActionListener() {
@@ -138,6 +164,8 @@ public class ActualizarCantante extends javax.swing.JInternalFrame {
                 txtNombreActionPerformed(evt);
             }
         });
+        jpanelA.add(txtNombre);
+        txtNombre.setBounds(280, 70, 164, 22);
 
         btnCancelar.setText("Cancelar");
         btnCancelar.addActionListener(new java.awt.event.ActionListener() {
@@ -145,32 +173,60 @@ public class ActualizarCantante extends javax.swing.JInternalFrame {
                 btnCancelarActionPerformed(evt);
             }
         });
+        jpanelA.add(btnCancelar);
+        btnCancelar.setBounds(441, 526, 76, 23);
 
         jblApellidoActualizarCantante.setText("Apellido:");
+        jpanelA.add(jblApellidoActualizarCantante);
+        jblApellidoActualizarCantante.setBounds(72, 124, 58, 16);
 
         txtApellido.setEnabled(false);
+        jpanelA.add(txtApellido);
+        txtApellido.setBounds(280, 120, 164, 22);
 
         jblEdadActualizarCantante.setText("Edad:");
+        jpanelA.add(jblEdadActualizarCantante);
+        jblEdadActualizarCantante.setBounds(72, 158, 58, 16);
 
         txtEdad.setEnabled(false);
+        jpanelA.add(txtEdad);
+        txtEdad.setBounds(280, 160, 164, 22);
 
         jblNacionalidadActualizarCantante.setText("Nacionalidad:");
+        jpanelA.add(jblNacionalidadActualizarCantante);
+        jblNacionalidadActualizarCantante.setBounds(72, 192, 86, 16);
 
         txtNacionalidad.setEnabled(false);
+        jpanelA.add(txtNacionalidad);
+        txtNacionalidad.setBounds(280, 200, 164, 22);
 
         jblSalarioActualizarCantante.setText("Salario:");
+        jpanelA.add(jblSalarioActualizarCantante);
+        jblSalarioActualizarCantante.setBounds(72, 239, 86, 16);
 
         txtSalario.setEnabled(false);
+        jpanelA.add(txtSalario);
+        txtSalario.setBounds(280, 240, 164, 22);
 
         jblNombreArtisticoActualizarCantante.setText("Nombre Artistico:");
+        jpanelA.add(jblNombreArtisticoActualizarCantante);
+        jblNombreArtisticoActualizarCantante.setBounds(72, 273, 118, 16);
 
         txtNombreArtistico.setEnabled(false);
+        jpanelA.add(txtNombreArtistico);
+        txtNombreArtistico.setBounds(280, 270, 164, 22);
 
         jblGeneroMusicalActualizarCantante.setText("Genero Musical:");
+        jpanelA.add(jblGeneroMusicalActualizarCantante);
+        jblGeneroMusicalActualizarCantante.setBounds(72, 307, 118, 16);
 
         txtGeneroMusical.setEnabled(false);
+        jpanelA.add(txtGeneroMusical);
+        txtGeneroMusical.setBounds(280, 300, 164, 22);
 
         jblNumeroSencillosActualizarCantante.setText("Numero de Sencillos:");
+        jpanelA.add(jblNumeroSencillosActualizarCantante);
+        jblNumeroSencillosActualizarCantante.setBounds(66, 349, 118, 16);
 
         bntBuscar.setText("Buscar");
         bntBuscar.addActionListener(new java.awt.event.ActionListener() {
@@ -178,151 +234,28 @@ public class ActualizarCantante extends javax.swing.JInternalFrame {
                 bntBuscarActionPerformed(evt);
             }
         });
+        jpanelA.add(bntBuscar);
+        bntBuscar.setBounds(480, 30, 72, 23);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Actulizar.png"))); // NOI18N
+        jpanelA.add(jLabel1);
+        jLabel1.setBounds(30, 30, 32, 32);
 
-        javax.swing.GroupLayout jpanelALayout = new javax.swing.GroupLayout(jpanelA);
-        jpanelA.setLayout(jpanelALayout);
-        jpanelALayout.setHorizontalGroup(
-            jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpanelALayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(bntActualizar)
-                .addGap(18, 18, 18)
-                .addComponent(btnCancelar)
-                .addGap(123, 123, 123))
-            .addGroup(jpanelALayout.createSequentialGroup()
-                .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jpanelALayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(jpanelALayout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(29, 29, 29)
-                                .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(jpanelALayout.createSequentialGroup()
-                                        .addComponent(jblGeneroMusicalActualizarCantante, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(txtGeneroMusical, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jpanelALayout.createSequentialGroup()
-                                        .addComponent(jblNombreArtisticoActualizarCantante, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(txtNombreArtistico, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jpanelALayout.createSequentialGroup()
-                                        .addComponent(jblSalarioActualizarCantante, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(txtSalario, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jpanelALayout.createSequentialGroup()
-                                        .addComponent(jblNacionalidadActualizarCantante, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(txtNacionalidad, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jpanelALayout.createSequentialGroup()
-                                        .addComponent(jblEdadActualizarCantante, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(txtEdad, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jpanelALayout.createSequentialGroup()
-                                        .addComponent(jblApellidoActualizarCantante, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(txtApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jpanelALayout.createSequentialGroup()
-                                        .addComponent(jblNombreActualizarCantante, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jpanelALayout.createSequentialGroup()
-                                        .addComponent(jblIdActualizarCantante)
-                                        .addGap(259, 259, 259)
-                                        .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(jpanelALayout.createSequentialGroup()
-                                .addComponent(jblNumeroSencillosActualizarCantante, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(161, 161, 161)
-                                .addComponent(txtNumeroSencillos, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jpanelALayout.createSequentialGroup()
-                        .addGap(61, 61, 61)
-                        .addComponent(jblNumeroConciertosActualizarCantante, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(txtNumeroConciertos, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jpanelALayout.createSequentialGroup()
-                        .addGap(61, 61, 61)
-                        .addComponent(jblNumeroGiras, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(txtNumeroGiras, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(bntBuscar)
-                .addGap(53, 53, 53))
-        );
-        jpanelALayout.setVerticalGroup(
-            jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpanelALayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel1)
-                    .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jblIdActualizarCantante)
-                        .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(21, 21, 21)
-                .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jpanelALayout.createSequentialGroup()
-                        .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jblNombreActualizarCantante)
-                            .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(25, 25, 25)
-                        .addComponent(jblApellidoActualizarCantante)
-                        .addGap(18, 18, 18)
-                        .addComponent(jblEdadActualizarCantante)
-                        .addGap(18, 18, 18)
-                        .addComponent(jblNacionalidadActualizarCantante)
-                        .addGap(31, 31, 31)
-                        .addComponent(jblSalarioActualizarCantante)
-                        .addGap(18, 18, 18)
-                        .addComponent(jblNombreArtisticoActualizarCantante)
-                        .addGap(18, 18, 18)
-                        .addComponent(jblGeneroMusicalActualizarCantante)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpanelALayout.createSequentialGroup()
-                        .addComponent(bntBuscar)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtApellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtEdad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txtNacionalidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtSalario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txtNombreArtistico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtGeneroMusical, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtNumeroSencillos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jblNumeroSencillosActualizarCantante))
-                        .addGap(26, 26, 26)))
-                .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jblNumeroConciertosActualizarCantante)
-                    .addComponent(txtNumeroConciertos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
-                .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtNumeroGiras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jblNumeroGiras))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
-                .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(bntActualizar)
-                    .addComponent(btnCancelar))
-                .addGap(14, 14, 14))
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ImgenCantante.jpg"))); // NOI18N
+        jpanelA.add(jLabel2);
+        jLabel2.setBounds(11, 19, 590, 640);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jpanelA, javax.swing.GroupLayout.PREFERRED_SIZE, 599, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jpanelA, javax.swing.GroupLayout.PREFERRED_SIZE, 585, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jpanelA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jpanelA, javax.swing.GroupLayout.DEFAULT_SIZE, 672, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -400,6 +333,10 @@ public class ActualizarCantante extends javax.swing.JInternalFrame {
     private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNombreActionPerformed
+
+    private void txtIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIDActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtIDActionPerformed
     
     private void visibilidad(boolean variable){
         
@@ -436,6 +373,7 @@ public class ActualizarCantante extends javax.swing.JInternalFrame {
     private javax.swing.JButton bntBuscar;
     private javax.swing.JButton btnCancelar;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jblApellidoActualizarCantante;
     private javax.swing.JLabel jblEdadActualizarCantante;
     private javax.swing.JLabel jblGeneroMusicalActualizarCantante;

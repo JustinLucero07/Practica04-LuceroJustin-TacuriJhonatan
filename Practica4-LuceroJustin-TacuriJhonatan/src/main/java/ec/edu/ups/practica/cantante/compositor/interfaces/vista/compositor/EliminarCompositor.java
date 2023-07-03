@@ -70,28 +70,46 @@ public class EliminarCompositor extends javax.swing.JInternalFrame {
         btnAceptar = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
         btnEliminarCompositor = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         jpanelA.setBorder(javax.swing.BorderFactory.createTitledBorder("ELIMINAR COMPOSITOR"));
+        jpanelA.setLayout(null);
 
         jblIdEliminarCompositor.setText("ID:");
+        jpanelA.add(jblIdEliminarCompositor);
+        jblIdEliminarCompositor.setBounds(60, 38, 14, 16);
 
         jblNombreEliminarCompositor.setText("Nombre:");
+        jpanelA.add(jblNombreEliminarCompositor);
+        jblNombreEliminarCompositor.setBounds(60, 67, 47, 16);
 
         jblApellidoEliminarCompositor.setText("Apellido:");
+        jpanelA.add(jblApellidoEliminarCompositor);
+        jblApellidoEliminarCompositor.setBounds(60, 101, 47, 16);
 
         jblEdadEliminarCompositor.setText("Edad:");
+        jpanelA.add(jblEdadEliminarCompositor);
+        jblEdadEliminarCompositor.setBounds(60, 135, 29, 16);
 
         jblNacionalidadEliminarCompositor.setText("Nacionalidad:");
+        jpanelA.add(jblNacionalidadEliminarCompositor);
+        jblNacionalidadEliminarCompositor.setBounds(60, 169, 73, 16);
 
         jblSalarioEliminarCompositor.setText("Salario:");
+        jpanelA.add(jblSalarioEliminarCompositor);
+        jblSalarioEliminarCompositor.setBounds(60, 209, 38, 16);
 
         jblNumeroComposicionesEliminarCompositor.setText("Numero de Composiciones:");
+        jpanelA.add(jblNumeroComposicionesEliminarCompositor);
+        jblNumeroComposicionesEliminarCompositor.setBounds(60, 243, 148, 16);
 
         txtId.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtIdActionPerformed(evt);
             }
         });
+        jpanelA.add(txtId);
+        txtId.setBounds(212, 35, 131, 22);
 
         txtNombre.setEditable(false);
         txtNombre.setEnabled(false);
@@ -100,6 +118,8 @@ public class EliminarCompositor extends javax.swing.JInternalFrame {
                 txtNombreActionPerformed(evt);
             }
         });
+        jpanelA.add(txtNombre);
+        txtNombre.setBounds(212, 64, 131, 22);
 
         txtApellido.setEditable(false);
         txtApellido.setEnabled(false);
@@ -108,6 +128,8 @@ public class EliminarCompositor extends javax.swing.JInternalFrame {
                 txtApellidoActionPerformed(evt);
             }
         });
+        jpanelA.add(txtApellido);
+        txtApellido.setBounds(212, 98, 131, 22);
 
         txtEdad.setEditable(false);
         txtEdad.setEnabled(false);
@@ -116,6 +138,8 @@ public class EliminarCompositor extends javax.swing.JInternalFrame {
                 txtEdadActionPerformed(evt);
             }
         });
+        jpanelA.add(txtEdad);
+        txtEdad.setBounds(212, 132, 131, 22);
 
         txtNacionalidad.setEditable(false);
         txtNacionalidad.setEnabled(false);
@@ -124,6 +148,8 @@ public class EliminarCompositor extends javax.swing.JInternalFrame {
                 txtNacionalidadActionPerformed(evt);
             }
         });
+        jpanelA.add(txtNacionalidad);
+        txtNacionalidad.setBounds(212, 166, 131, 22);
 
         txtSalario.setEditable(false);
         txtSalario.setEnabled(false);
@@ -132,6 +158,8 @@ public class EliminarCompositor extends javax.swing.JInternalFrame {
                 txtSalarioActionPerformed(evt);
             }
         });
+        jpanelA.add(txtSalario);
+        txtSalario.setBounds(212, 206, 131, 22);
 
         txtNumeroComposiciones.setEditable(false);
         txtNumeroComposiciones.setEnabled(false);
@@ -140,6 +168,8 @@ public class EliminarCompositor extends javax.swing.JInternalFrame {
                 txtNumeroComposicionesActionPerformed(evt);
             }
         });
+        jpanelA.add(txtNumeroComposiciones);
+        txtNumeroComposiciones.setBounds(214, 240, 131, 22);
 
         btnAceptar.setText("Buscar");
         btnAceptar.addActionListener(new java.awt.event.ActionListener() {
@@ -147,6 +177,8 @@ public class EliminarCompositor extends javax.swing.JInternalFrame {
                 btnAceptarActionPerformed(evt);
             }
         });
+        jpanelA.add(btnAceptar);
+        btnAceptar.setBounds(371, 35, 72, 23);
 
         btnCancelar.setText("Cancelar");
         btnCancelar.addActionListener(new java.awt.event.ActionListener() {
@@ -154,6 +186,8 @@ public class EliminarCompositor extends javax.swing.JInternalFrame {
                 btnCancelarActionPerformed(evt);
             }
         });
+        jpanelA.add(btnCancelar);
+        btnCancelar.setBounds(250, 310, 76, 23);
 
         btnEliminarCompositor.setText("Eliminar");
         btnEliminarCompositor.addActionListener(new java.awt.event.ActionListener() {
@@ -161,92 +195,22 @@ public class EliminarCompositor extends javax.swing.JInternalFrame {
                 btnEliminarCompositorActionPerformed(evt);
             }
         });
+        jpanelA.add(btnEliminarCompositor);
+        btnEliminarCompositor.setBounds(150, 310, 73, 23);
 
-        javax.swing.GroupLayout jpanelALayout = new javax.swing.GroupLayout(jpanelA);
-        jpanelA.setLayout(jpanelALayout);
-        jpanelALayout.setHorizontalGroup(
-            jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpanelALayout.createSequentialGroup()
-                .addGap(55, 55, 55)
-                .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jpanelALayout.createSequentialGroup()
-                        .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jblIdEliminarCompositor)
-                            .addComponent(jblNombreEliminarCompositor)
-                            .addComponent(jblApellidoEliminarCompositor)
-                            .addComponent(jblEdadEliminarCompositor)
-                            .addComponent(jblNacionalidadEliminarCompositor)
-                            .addComponent(jblSalarioEliminarCompositor))
-                        .addGap(79, 79, 79)
-                        .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtSalario, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtNacionalidad, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtEdad, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jpanelALayout.createSequentialGroup()
-                                .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(28, 28, 28)
-                                .addComponent(btnAceptar))))
-                    .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(jpanelALayout.createSequentialGroup()
-                            .addComponent(btnEliminarCompositor)
-                            .addGap(18, 18, 18)
-                            .addComponent(btnCancelar))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jpanelALayout.createSequentialGroup()
-                            .addComponent(jblNumeroComposicionesEliminarCompositor)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(txtNumeroComposiciones, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(83, Short.MAX_VALUE))
-        );
-        jpanelALayout.setVerticalGroup(
-            jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpanelALayout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jblIdEliminarCompositor)
-                    .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnAceptar))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jblNombreEliminarCompositor)
-                    .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jblApellidoEliminarCompositor)
-                    .addComponent(txtApellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jblEdadEliminarCompositor)
-                    .addComponent(txtEdad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jblNacionalidadEliminarCompositor)
-                    .addComponent(txtNacionalidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jblSalarioEliminarCompositor)
-                    .addComponent(txtSalario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jblNumeroComposicionesEliminarCompositor)
-                    .addComponent(txtNumeroComposiciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
-                .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnCancelar)
-                    .addComponent(btnEliminarCompositor))
-                .addGap(14, 14, 14))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ImgenEliminar.jpg"))); // NOI18N
+        jpanelA.add(jLabel1);
+        jLabel1.setBounds(10, 16, 520, 360);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jpanelA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jpanelA, javax.swing.GroupLayout.DEFAULT_SIZE, 535, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jpanelA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jpanelA, javax.swing.GroupLayout.DEFAULT_SIZE, 378, Short.MAX_VALUE)
         );
 
         pack();
@@ -335,6 +299,7 @@ public class EliminarCompositor extends javax.swing.JInternalFrame {
     private javax.swing.JButton btnAceptar;
     private javax.swing.JButton btnCancelar;
     private javax.swing.JButton btnEliminarCompositor;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jblApellidoEliminarCompositor;
     private javax.swing.JLabel jblEdadEliminarCompositor;
     private javax.swing.JLabel jblIdEliminarCompositor;

@@ -71,30 +71,48 @@ public class ActualizarCompositor extends javax.swing.JInternalFrame {
         btnAceptar = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
         btnActualizarCompositor = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         jButton1.setText("jButton1");
 
         jpanelA.setBorder(javax.swing.BorderFactory.createTitledBorder("ACTUALIZAR COMPOSITOR"));
+        jpanelA.setLayout(null);
 
         jblIdActualizarCompositor.setText("ID:");
+        jpanelA.add(jblIdActualizarCompositor);
+        jblIdActualizarCompositor.setBounds(60, 38, 14, 16);
 
         jblNombreActualizarCompositor.setText("Nombre:");
+        jpanelA.add(jblNombreActualizarCompositor);
+        jblNombreActualizarCompositor.setBounds(60, 67, 47, 16);
 
         jblApellidoActualizarCompositor.setText("Apellido:");
+        jpanelA.add(jblApellidoActualizarCompositor);
+        jblApellidoActualizarCompositor.setBounds(60, 101, 47, 16);
 
         jblEdadActualizarCompositor.setText("Edad:");
+        jpanelA.add(jblEdadActualizarCompositor);
+        jblEdadActualizarCompositor.setBounds(60, 135, 29, 16);
 
         jblNacionalidadActualizarCompositor.setText("Nacionalidad:");
+        jpanelA.add(jblNacionalidadActualizarCompositor);
+        jblNacionalidadActualizarCompositor.setBounds(60, 169, 73, 16);
 
         jblSalarioActualizarCompositor.setText("Salario:");
+        jpanelA.add(jblSalarioActualizarCompositor);
+        jblSalarioActualizarCompositor.setBounds(60, 209, 38, 16);
 
         jblNumeroComposiciones.setText("Numero de Composiciones:");
+        jpanelA.add(jblNumeroComposiciones);
+        jblNumeroComposiciones.setBounds(60, 243, 148, 16);
 
         txtId.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtIdActionPerformed(evt);
             }
         });
+        jpanelA.add(txtId);
+        txtId.setBounds(212, 35, 131, 22);
 
         txtNombre.setEditable(false);
         txtNombre.setEnabled(false);
@@ -103,6 +121,8 @@ public class ActualizarCompositor extends javax.swing.JInternalFrame {
                 txtNombreActionPerformed(evt);
             }
         });
+        jpanelA.add(txtNombre);
+        txtNombre.setBounds(212, 64, 131, 22);
 
         txtApellido.setEditable(false);
         txtApellido.setEnabled(false);
@@ -111,6 +131,8 @@ public class ActualizarCompositor extends javax.swing.JInternalFrame {
                 txtApellidoActionPerformed(evt);
             }
         });
+        jpanelA.add(txtApellido);
+        txtApellido.setBounds(212, 98, 131, 22);
 
         txtEdad.setEditable(false);
         txtEdad.setEnabled(false);
@@ -119,6 +141,8 @@ public class ActualizarCompositor extends javax.swing.JInternalFrame {
                 txtEdadActionPerformed(evt);
             }
         });
+        jpanelA.add(txtEdad);
+        txtEdad.setBounds(212, 132, 131, 22);
 
         txtNacionalidad.setEditable(false);
         txtNacionalidad.setEnabled(false);
@@ -127,6 +151,8 @@ public class ActualizarCompositor extends javax.swing.JInternalFrame {
                 txtNacionalidadActionPerformed(evt);
             }
         });
+        jpanelA.add(txtNacionalidad);
+        txtNacionalidad.setBounds(212, 166, 131, 22);
 
         txtSalario.setEditable(false);
         txtSalario.setEnabled(false);
@@ -135,6 +161,8 @@ public class ActualizarCompositor extends javax.swing.JInternalFrame {
                 txtSalarioActionPerformed(evt);
             }
         });
+        jpanelA.add(txtSalario);
+        txtSalario.setBounds(212, 206, 131, 22);
 
         txtNumeroComposiciones.setEditable(false);
         txtNumeroComposiciones.setEnabled(false);
@@ -143,6 +171,8 @@ public class ActualizarCompositor extends javax.swing.JInternalFrame {
                 txtNumeroComposicionesActionPerformed(evt);
             }
         });
+        jpanelA.add(txtNumeroComposiciones);
+        txtNumeroComposiciones.setBounds(214, 240, 131, 22);
 
         btnAceptar.setText("Buscar");
         btnAceptar.addActionListener(new java.awt.event.ActionListener() {
@@ -150,6 +180,8 @@ public class ActualizarCompositor extends javax.swing.JInternalFrame {
                 btnAceptarActionPerformed(evt);
             }
         });
+        jpanelA.add(btnAceptar);
+        btnAceptar.setBounds(370, 35, 72, 23);
 
         btnCancelar.setText("Cancelar");
         btnCancelar.addActionListener(new java.awt.event.ActionListener() {
@@ -157,6 +189,8 @@ public class ActualizarCompositor extends javax.swing.JInternalFrame {
                 btnCancelarActionPerformed(evt);
             }
         });
+        jpanelA.add(btnCancelar);
+        btnCancelar.setBounds(260, 300, 110, 23);
 
         btnActualizarCompositor.setText("Actualizar");
         btnActualizarCompositor.addActionListener(new java.awt.event.ActionListener() {
@@ -164,92 +198,22 @@ public class ActualizarCompositor extends javax.swing.JInternalFrame {
                 btnActualizarCompositorActionPerformed(evt);
             }
         });
+        jpanelA.add(btnActualizarCompositor);
+        btnActualizarCompositor.setBounds(122, 300, 120, 23);
 
-        javax.swing.GroupLayout jpanelALayout = new javax.swing.GroupLayout(jpanelA);
-        jpanelA.setLayout(jpanelALayout);
-        jpanelALayout.setHorizontalGroup(
-            jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpanelALayout.createSequentialGroup()
-                .addGap(55, 55, 55)
-                .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jpanelALayout.createSequentialGroup()
-                        .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jblIdActualizarCompositor)
-                            .addComponent(jblNombreActualizarCompositor)
-                            .addComponent(jblApellidoActualizarCompositor)
-                            .addComponent(jblEdadActualizarCompositor)
-                            .addComponent(jblNacionalidadActualizarCompositor)
-                            .addComponent(jblSalarioActualizarCompositor))
-                        .addGap(79, 79, 79)
-                        .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtSalario, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtNacionalidad, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtEdad, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jpanelALayout.createSequentialGroup()
-                                .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(27, 27, 27)
-                                .addComponent(btnAceptar))))
-                    .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(jpanelALayout.createSequentialGroup()
-                            .addComponent(btnActualizarCompositor)
-                            .addGap(18, 18, 18)
-                            .addComponent(btnCancelar))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jpanelALayout.createSequentialGroup()
-                            .addComponent(jblNumeroComposiciones)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(txtNumeroComposiciones, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(68, Short.MAX_VALUE))
-        );
-        jpanelALayout.setVerticalGroup(
-            jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpanelALayout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jblIdActualizarCompositor)
-                    .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnAceptar))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jblNombreActualizarCompositor)
-                    .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jblApellidoActualizarCompositor)
-                    .addComponent(txtApellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jblEdadActualizarCompositor)
-                    .addComponent(txtEdad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jblNacionalidadActualizarCompositor)
-                    .addComponent(txtNacionalidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jblSalarioActualizarCompositor)
-                    .addComponent(txtSalario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jblNumeroComposiciones)
-                    .addComponent(txtNumeroComposiciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
-                .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnCancelar)
-                    .addComponent(btnActualizarCompositor))
-                .addGap(14, 14, 14))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ImgenActualizar.jpg"))); // NOI18N
+        jpanelA.add(jLabel1);
+        jLabel1.setBounds(10, 20, 480, 330);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jpanelA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jpanelA, javax.swing.GroupLayout.PREFERRED_SIZE, 496, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jpanelA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jpanelA, javax.swing.GroupLayout.DEFAULT_SIZE, 367, Short.MAX_VALUE)
         );
 
         pack();
@@ -359,6 +323,7 @@ public class ActualizarCompositor extends javax.swing.JInternalFrame {
     private javax.swing.JButton btnActualizarCompositor;
     private javax.swing.JButton btnCancelar;
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jblApellidoActualizarCompositor;
     private javax.swing.JLabel jblEdadActualizarCompositor;
     private javax.swing.JLabel jblIdActualizarCompositor;

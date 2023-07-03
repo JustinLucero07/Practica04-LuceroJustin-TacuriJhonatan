@@ -82,30 +82,48 @@ public class BuscarCompositor extends javax.swing.JInternalFrame {
         btnCancelar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblCancion = new javax.swing.JTable();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
 
         jpanelA.setBorder(javax.swing.BorderFactory.createTitledBorder("BUSCAR COMPOSITOR"));
+        jpanelA.setLayout(null);
 
         jblIdBuscarCompositor.setText("ID:");
+        jpanelA.add(jblIdBuscarCompositor);
+        jblIdBuscarCompositor.setBounds(60, 38, 14, 16);
 
         jblNombreBuscarCompositor.setText("Nombre:");
+        jpanelA.add(jblNombreBuscarCompositor);
+        jblNombreBuscarCompositor.setBounds(60, 66, 47, 16);
 
         jblApellidoBuscarCompositor.setText("Apellido:");
+        jpanelA.add(jblApellidoBuscarCompositor);
+        jblApellidoBuscarCompositor.setBounds(60, 100, 47, 16);
 
         jblEdadBuscarCompositor.setText("Edad:");
+        jpanelA.add(jblEdadBuscarCompositor);
+        jblEdadBuscarCompositor.setBounds(60, 134, 29, 16);
 
         jblNacionalidadBuscarCompositor.setText("Nacionalidad:");
+        jpanelA.add(jblNacionalidadBuscarCompositor);
+        jblNacionalidadBuscarCompositor.setBounds(60, 168, 73, 16);
 
         jblSalarioBuscarCompositor.setText("Salario:");
+        jpanelA.add(jblSalarioBuscarCompositor);
+        jblSalarioBuscarCompositor.setBounds(60, 208, 38, 16);
 
         jblNumeroComposiconesBuscarCompositor.setText("Numero de Composiciones:");
+        jpanelA.add(jblNumeroComposiconesBuscarCompositor);
+        jblNumeroComposiconesBuscarCompositor.setBounds(60, 242, 148, 16);
 
         txtId.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtIdActionPerformed(evt);
             }
         });
+        jpanelA.add(txtId);
+        txtId.setBounds(212, 35, 131, 22);
 
         txtNombre.setEditable(false);
         txtNombre.setEnabled(false);
@@ -114,6 +132,8 @@ public class BuscarCompositor extends javax.swing.JInternalFrame {
                 txtNombreActionPerformed(evt);
             }
         });
+        jpanelA.add(txtNombre);
+        txtNombre.setBounds(212, 63, 131, 22);
 
         txtApellido.setEditable(false);
         txtApellido.setEnabled(false);
@@ -122,6 +142,8 @@ public class BuscarCompositor extends javax.swing.JInternalFrame {
                 txtApellidoActionPerformed(evt);
             }
         });
+        jpanelA.add(txtApellido);
+        txtApellido.setBounds(212, 97, 131, 22);
 
         txtEdad.setEditable(false);
         txtEdad.setEnabled(false);
@@ -130,6 +152,8 @@ public class BuscarCompositor extends javax.swing.JInternalFrame {
                 txtEdadActionPerformed(evt);
             }
         });
+        jpanelA.add(txtEdad);
+        txtEdad.setBounds(212, 131, 131, 22);
 
         txtNacionalidad.setEditable(false);
         txtNacionalidad.setEnabled(false);
@@ -138,6 +162,8 @@ public class BuscarCompositor extends javax.swing.JInternalFrame {
                 txtNacionalidadActionPerformed(evt);
             }
         });
+        jpanelA.add(txtNacionalidad);
+        txtNacionalidad.setBounds(212, 165, 131, 22);
 
         txtSalario.setEditable(false);
         txtSalario.setEnabled(false);
@@ -146,6 +172,8 @@ public class BuscarCompositor extends javax.swing.JInternalFrame {
                 txtSalarioActionPerformed(evt);
             }
         });
+        jpanelA.add(txtSalario);
+        txtSalario.setBounds(212, 205, 131, 22);
 
         txtNumeroComposiciones.setEditable(false);
         txtNumeroComposiciones.setEnabled(false);
@@ -154,6 +182,8 @@ public class BuscarCompositor extends javax.swing.JInternalFrame {
                 txtNumeroComposicionesActionPerformed(evt);
             }
         });
+        jpanelA.add(txtNumeroComposiciones);
+        txtNumeroComposiciones.setBounds(214, 239, 131, 22);
 
         btnAceptar.setText("Buscar");
         btnAceptar.addActionListener(new java.awt.event.ActionListener() {
@@ -161,6 +191,8 @@ public class BuscarCompositor extends javax.swing.JInternalFrame {
                 btnAceptarActionPerformed(evt);
             }
         });
+        jpanelA.add(btnAceptar);
+        btnAceptar.setBounds(162, 342, 72, 23);
 
         btnCancelar.setText("Cancelar");
         btnCancelar.addActionListener(new java.awt.event.ActionListener() {
@@ -168,6 +200,8 @@ public class BuscarCompositor extends javax.swing.JInternalFrame {
                 btnCancelarActionPerformed(evt);
             }
         });
+        jpanelA.add(btnCancelar);
+        btnCancelar.setBounds(269, 342, 76, 23);
 
         tblCancion.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -182,93 +216,23 @@ public class BuscarCompositor extends javax.swing.JInternalFrame {
         ));
         jScrollPane1.setViewportView(tblCancion);
 
-        javax.swing.GroupLayout jpanelALayout = new javax.swing.GroupLayout(jpanelA);
-        jpanelA.setLayout(jpanelALayout);
-        jpanelALayout.setHorizontalGroup(
-            jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpanelALayout.createSequentialGroup()
-                .addGap(55, 55, 55)
-                .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jpanelALayout.createSequentialGroup()
-                        .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jblIdBuscarCompositor)
-                            .addComponent(jblNombreBuscarCompositor)
-                            .addComponent(jblApellidoBuscarCompositor)
-                            .addComponent(jblEdadBuscarCompositor)
-                            .addComponent(jblNacionalidadBuscarCompositor)
-                            .addComponent(jblSalarioBuscarCompositor))
-                        .addGap(79, 79, 79)
-                        .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtSalario, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtNacionalidad, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtEdad, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jpanelALayout.createSequentialGroup()
-                            .addGap(102, 102, 102)
-                            .addComponent(btnAceptar)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnCancelar))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jpanelALayout.createSequentialGroup()
-                            .addComponent(jblNumeroComposiconesBuscarCompositor)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(txtNumeroComposiciones, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 467, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        jpanelALayout.setVerticalGroup(
-            jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpanelALayout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jblIdBuscarCompositor)
-                    .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jblNombreBuscarCompositor)
-                    .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jblApellidoBuscarCompositor)
-                    .addComponent(txtApellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jblEdadBuscarCompositor)
-                    .addComponent(txtEdad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jblNacionalidadBuscarCompositor)
-                    .addComponent(txtNacionalidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jblSalarioBuscarCompositor)
-                    .addComponent(txtSalario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jblNumeroComposiconesBuscarCompositor)
-                    .addComponent(txtNumeroComposiciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAceptar)
-                    .addComponent(btnCancelar))
-                .addGap(14, 14, 14))
-            .addGroup(jpanelALayout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+        jpanelA.add(jScrollPane1);
+        jScrollPane1.setBounds(420, 30, 430, 320);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Imgen.jpg"))); // NOI18N
+        jLabel1.setToolTipText("");
+        jpanelA.add(jLabel1);
+        jLabel1.setBounds(10, 16, 860, 360);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jpanelA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jpanelA, javax.swing.GroupLayout.DEFAULT_SIZE, 873, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jpanelA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jpanelA, javax.swing.GroupLayout.DEFAULT_SIZE, 383, Short.MAX_VALUE)
         );
 
         pack();
@@ -344,6 +308,7 @@ public class BuscarCompositor extends javax.swing.JInternalFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAceptar;
     private javax.swing.JButton btnCancelar;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel jblApellidoBuscarCompositor;
     private javax.swing.JLabel jblEdadBuscarCompositor;

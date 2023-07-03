@@ -86,6 +86,7 @@ public class BuscarPorTitulo extends javax.swing.JInternalFrame {
         txtTituloCancion = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblCancion = new javax.swing.JTable();
+        jLabel1 = new javax.swing.JLabel();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -101,20 +102,35 @@ public class BuscarPorTitulo extends javax.swing.JInternalFrame {
         jScrollPane1.setViewportView(jTable1);
 
         jpanelA.setBorder(javax.swing.BorderFactory.createTitledBorder("BUSCAR POR TÍTULO DE CANCIÓN"));
+        jpanelA.setLayout(null);
 
         jblIdBuscarPorTitulo.setText("ID:");
+        jpanelA.add(jblIdBuscarPorTitulo);
+        jblIdBuscarPorTitulo.setBounds(60, 55, 14, 16);
 
         jblNombreBuscarPorTitulo.setText("Nombre:");
+        jpanelA.add(jblNombreBuscarPorTitulo);
+        jblNombreBuscarPorTitulo.setBounds(60, 89, 47, 16);
 
         jblApellidoBuscarPorTitulo.setText("Apellido:");
+        jpanelA.add(jblApellidoBuscarPorTitulo);
+        jblApellidoBuscarPorTitulo.setBounds(60, 123, 47, 16);
 
         jblEdadBuscarPorTitulo.setText("Edad:");
+        jpanelA.add(jblEdadBuscarPorTitulo);
+        jblEdadBuscarPorTitulo.setBounds(60, 163, 29, 16);
 
         jblNacionalidadBuscarPorTitulo.setText("Nacionalidad:");
+        jpanelA.add(jblNacionalidadBuscarPorTitulo);
+        jblNacionalidadBuscarPorTitulo.setBounds(60, 197, 73, 16);
 
         jblSalarioBuscarPorTitulo.setText("Salario:");
+        jpanelA.add(jblSalarioBuscarPorTitulo);
+        jblSalarioBuscarPorTitulo.setBounds(60, 231, 38, 16);
 
         jblNumeroComposicionesBuscarPorTitulo.setText("Numero de Composiciones:");
+        jpanelA.add(jblNumeroComposicionesBuscarPorTitulo);
+        jblNumeroComposicionesBuscarPorTitulo.setBounds(60, 265, 148, 16);
 
         txtId.setEnabled(false);
         txtId.addActionListener(new java.awt.event.ActionListener() {
@@ -122,6 +138,8 @@ public class BuscarPorTitulo extends javax.swing.JInternalFrame {
                 txtIdActionPerformed(evt);
             }
         });
+        jpanelA.add(txtId);
+        txtId.setBounds(214, 52, 131, 22);
 
         txtNombre.setEditable(false);
         txtNombre.setEnabled(false);
@@ -130,6 +148,8 @@ public class BuscarPorTitulo extends javax.swing.JInternalFrame {
                 txtNombreActionPerformed(evt);
             }
         });
+        jpanelA.add(txtNombre);
+        txtNombre.setBounds(214, 86, 131, 22);
 
         txtApellido.setEditable(false);
         txtApellido.setEnabled(false);
@@ -138,6 +158,8 @@ public class BuscarPorTitulo extends javax.swing.JInternalFrame {
                 txtApellidoActionPerformed(evt);
             }
         });
+        jpanelA.add(txtApellido);
+        txtApellido.setBounds(214, 120, 131, 22);
 
         txtEdad.setEditable(false);
         txtEdad.setEnabled(false);
@@ -146,6 +168,8 @@ public class BuscarPorTitulo extends javax.swing.JInternalFrame {
                 txtEdadActionPerformed(evt);
             }
         });
+        jpanelA.add(txtEdad);
+        txtEdad.setBounds(214, 160, 131, 22);
 
         txtNacionalidad.setEditable(false);
         txtNacionalidad.setEnabled(false);
@@ -154,6 +178,8 @@ public class BuscarPorTitulo extends javax.swing.JInternalFrame {
                 txtNacionalidadActionPerformed(evt);
             }
         });
+        jpanelA.add(txtNacionalidad);
+        txtNacionalidad.setBounds(214, 194, 131, 22);
 
         txtSalario.setEditable(false);
         txtSalario.setEnabled(false);
@@ -162,6 +188,8 @@ public class BuscarPorTitulo extends javax.swing.JInternalFrame {
                 txtSalarioActionPerformed(evt);
             }
         });
+        jpanelA.add(txtSalario);
+        txtSalario.setBounds(214, 228, 131, 22);
 
         txtNumeroComposiciones.setEditable(false);
         txtNumeroComposiciones.setEnabled(false);
@@ -170,6 +198,8 @@ public class BuscarPorTitulo extends javax.swing.JInternalFrame {
                 txtNumeroComposicionesActionPerformed(evt);
             }
         });
+        jpanelA.add(txtNumeroComposiciones);
+        txtNumeroComposiciones.setBounds(214, 262, 131, 22);
 
         btnAceptar.setText("Buscar");
         btnAceptar.addActionListener(new java.awt.event.ActionListener() {
@@ -177,6 +207,8 @@ public class BuscarPorTitulo extends javax.swing.JInternalFrame {
                 btnAceptarActionPerformed(evt);
             }
         });
+        jpanelA.add(btnAceptar);
+        btnAceptar.setBounds(162, 311, 72, 23);
 
         btnCancelar.setText("Cancelar");
         btnCancelar.addActionListener(new java.awt.event.ActionListener() {
@@ -184,8 +216,14 @@ public class BuscarPorTitulo extends javax.swing.JInternalFrame {
                 btnCancelarActionPerformed(evt);
             }
         });
+        jpanelA.add(btnCancelar);
+        btnCancelar.setBounds(269, 311, 76, 23);
 
         jblTItuloCancionBuscarPorTitulo.setText("Ingrese el nombre de la cancion para encontrar a su comporsitor:");
+        jpanelA.add(jblTItuloCancionBuscarPorTitulo);
+        jblTItuloCancionBuscarPorTitulo.setBounds(11, 27, 343, 16);
+        jpanelA.add(txtTituloCancion);
+        txtTituloCancion.setBounds(372, 24, 148, 22);
 
         tblCancion.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -200,104 +238,23 @@ public class BuscarPorTitulo extends javax.swing.JInternalFrame {
         ));
         jScrollPane2.setViewportView(tblCancion);
 
-        javax.swing.GroupLayout jpanelALayout = new javax.swing.GroupLayout(jpanelA);
-        jpanelA.setLayout(jpanelALayout);
-        jpanelALayout.setHorizontalGroup(
-            jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpanelALayout.createSequentialGroup()
-                .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jpanelALayout.createSequentialGroup()
-                        .addGap(55, 55, 55)
-                        .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jblNombreBuscarPorTitulo)
-                            .addComponent(jblEdadBuscarPorTitulo)
-                            .addComponent(jblIdBuscarPorTitulo)
-                            .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jpanelALayout.createSequentialGroup()
-                                    .addGap(102, 102, 102)
-                                    .addComponent(btnAceptar)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(btnCancelar))
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jpanelALayout.createSequentialGroup()
-                                    .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jblNumeroComposicionesBuscarPorTitulo)
-                                        .addComponent(jblSalarioBuscarPorTitulo)
-                                        .addComponent(jblNacionalidadBuscarPorTitulo)
-                                        .addComponent(jblApellidoBuscarPorTitulo))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(txtSalario, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(txtNumeroComposiciones, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(txtNacionalidad, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(txtEdad, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(txtApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 467, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jpanelALayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jblTItuloCancionBuscarPorTitulo)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtTituloCancion, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        jpanelALayout.setVerticalGroup(
-            jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpanelALayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jblTItuloCancionBuscarPorTitulo)
-                    .addComponent(txtTituloCancion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jpanelALayout.createSequentialGroup()
-                        .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jblIdBuscarPorTitulo)
-                            .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jblNombreBuscarPorTitulo)
-                            .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jblApellidoBuscarPorTitulo)
-                            .addComponent(txtApellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jblEdadBuscarPorTitulo)
-                            .addComponent(txtEdad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jblNacionalidadBuscarPorTitulo)
-                            .addComponent(txtNacionalidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jblSalarioBuscarPorTitulo)
-                            .addComponent(txtSalario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jblNumeroComposicionesBuscarPorTitulo)
-                            .addComponent(txtNumeroComposiciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(27, 27, 27)
-                        .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnAceptar)
-                            .addComponent(btnCancelar)))
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
-        );
+        jpanelA.add(jScrollPane2);
+        jScrollPane2.setBounds(380, 70, 460, 290);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Imgen.jpg"))); // NOI18N
+        jpanelA.add(jLabel1);
+        jLabel1.setBounds(10, 0, 870, 410);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jpanelA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jpanelA, javax.swing.GroupLayout.DEFAULT_SIZE, 891, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jpanelA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jpanelA, javax.swing.GroupLayout.DEFAULT_SIZE, 404, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -375,6 +332,7 @@ public class BuscarPorTitulo extends javax.swing.JInternalFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAceptar;
     private javax.swing.JButton btnCancelar;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
