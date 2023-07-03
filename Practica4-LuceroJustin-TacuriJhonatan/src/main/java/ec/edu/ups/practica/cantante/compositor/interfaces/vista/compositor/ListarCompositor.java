@@ -29,6 +29,7 @@ public class ListarCompositor extends javax.swing.JInternalFrame {
         initComponents();
         this.controladorCompositor = controladorCompositor;
     }
+    
 
     public void cambiarIdioma(Locale localizacion){
         mensajes = ResourceBundle.getBundle("mensajes.mensaje", localizacion);

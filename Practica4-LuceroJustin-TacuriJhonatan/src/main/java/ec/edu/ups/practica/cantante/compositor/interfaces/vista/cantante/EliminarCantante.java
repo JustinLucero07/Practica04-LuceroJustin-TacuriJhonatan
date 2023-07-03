@@ -84,6 +84,7 @@ public class EliminarCantante extends javax.swing.JInternalFrame {
         bntEliminar = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
         bntBuscarr = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
 
@@ -163,12 +164,22 @@ public class EliminarCantante extends javax.swing.JInternalFrame {
             }
         });
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Eliminar.png"))); // NOI18N
+
         javax.swing.GroupLayout jpanelALayout = new javax.swing.GroupLayout(jpanelA);
         jpanelA.setLayout(jpanelALayout);
         jpanelALayout.setHorizontalGroup(
             jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpanelALayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(bntEliminar)
+                .addGap(18, 18, 18)
+                .addComponent(btnCancelar)
+                .addGap(123, 123, 123))
             .addGroup(jpanelALayout.createSequentialGroup()
-                .addGap(121, 121, 121)
+                .addGap(26, 26, 26)
+                .addComponent(jLabel1)
+                .addGap(63, 63, 63)
                 .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jblIdEliminarCantante)
                     .addComponent(jblNombreEliminarCantante, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -198,25 +209,21 @@ public class EliminarCantante extends javax.swing.JInternalFrame {
                         .addGap(35, 35, 35)
                         .addComponent(bntBuscarr)))
                 .addContainerGap(40, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpanelALayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(bntEliminar)
-                .addGap(18, 18, 18)
-                .addComponent(btnCancelar)
-                .addGap(123, 123, 123))
         );
         jpanelALayout.setVerticalGroup(
             jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpanelALayout.createSequentialGroup()
-                .addGap(43, 43, 43)
+                .addGap(59, 59, 59)
                 .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jpanelALayout.createSequentialGroup()
                         .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jpanelALayout.createSequentialGroup()
-                                .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jblIdEliminarCantante)
-                                    .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(bntBuscarr))
+                                .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jblIdEliminarCantante)
+                                        .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(bntBuscarr))
+                                    .addComponent(jLabel1))
                                 .addGap(18, 18, 18)
                                 .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jblNombreEliminarCantante)
@@ -341,6 +348,7 @@ public class EliminarCantante extends javax.swing.JInternalFrame {
     private javax.swing.JButton bntBuscarr;
     private javax.swing.JButton bntEliminar;
     private javax.swing.JButton btnCancelar;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jblApellidoEliminarCantante;
     private javax.swing.JLabel jblEdadEliminarCantante;
     private javax.swing.JLabel jblGeneroMusicalEliminarCantante;
