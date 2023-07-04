@@ -39,7 +39,7 @@ public class ActualizarCompositor extends javax.swing.JInternalFrame {
         btnAceptar.setText(mensajes.getString("boton.buscar"));
         btnActualizarCompositor.setText(mensajes.getString("boton.actualizar"));
         btnCancelar.setText(mensajes.getString("boton.cancelar"));
-        Border borde = BorderFactory.createTitledBorder(mensajes.getString("panel.actualicompositor"));
+        Border borde = BorderFactory.createTitledBorder(mensajes.getString("panel.actualizarcompositor"));
         jpanelA.setBorder(borde);
     }
     

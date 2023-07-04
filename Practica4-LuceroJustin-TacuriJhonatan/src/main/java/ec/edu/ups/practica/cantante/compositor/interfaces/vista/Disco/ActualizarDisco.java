@@ -34,13 +34,14 @@ public class ActualizarDisco extends javax.swing.JInternalFrame {
     public void cambiarIdioma(Locale localizacion){
         mensajes = ResourceBundle.getBundle("mensajes.mensaje", localizacion);
         jblCodigoActualizarDisco.setText(mensajes.getString("ventana.codigo"));
-        jblIdActualizarDisco.setText(mensajes.getString("ventana.id"));
+        jblIdActualizarDisco.setText(mensajes.getString("jblbuuscar.cantante"));
         jblNombreActualizarDisco.setText(mensajes.getString("ventana.nombre"));
         jblNombreArtisticoActualizarDisco.setText(mensajes.getString("ventanaCantante.nombreartistico"));
         jblEdadActualizarDisco.setText(mensajes.getString("ventana.edad"));
         jblApellidoActualizarDisco.setText(mensajes.getString("ventana.apellido"));
         jblNombreDiscoActualizarDisco.setText(mensajes.getString("ventana.nombre"));
         jblAnioLanzaminietoActualizarDisco.setText(mensajes.getString("ventanaDisco.aniolanzamiento"));
+        jblNombreDiiisco.setText(mensajes.getString("jbl.nombrediscooooo"));
         bntActualizar.setText(mensajes.getString("boton.actualizar"));
         bntBuscar4.setText(mensajes.getString("boton.buscar"));
         bntBuscarDisco.setText(mensajes.getString("boton.buscar"));
@@ -65,7 +66,7 @@ public class ActualizarDisco extends javax.swing.JInternalFrame {
         jblIdActualizarDisco = new javax.swing.JLabel();
         txtIdCantante4 = new javax.swing.JTextField();
         bntBuscar4 = new javax.swing.JButton();
-        jLabel38 = new javax.swing.JLabel();
+        jblNombreDiiisco = new javax.swing.JLabel();
         txtNombre4 = new javax.swing.JTextField();
         jblNombreActualizarDisco = new javax.swing.JLabel();
         jblApellidoActualizarDisco = new javax.swing.JLabel();
@@ -99,7 +100,7 @@ public class ActualizarDisco extends javax.swing.JInternalFrame {
             }
         });
 
-        jLabel38.setText("Ingrese el nombre del disco");
+        jblNombreDiiisco.setText("Ingrese el nombre del disco");
 
         txtNombre4.setEditable(false);
         txtNombre4.setEnabled(false);
@@ -179,7 +180,7 @@ public class ActualizarDisco extends javax.swing.JInternalFrame {
                 .addGap(23, 23, 23)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addComponent(jLabel38)
+                        .addComponent(jblNombreDiiisco)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
@@ -251,7 +252,7 @@ public class ActualizarDisco extends javax.swing.JInternalFrame {
                     .addComponent(jblNombreArtisticoActualizarDisco)
                     .addComponent(txtNombreArtistico4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(35, 35, 35)
-                .addComponent(jLabel38)
+                .addComponent(jblNombreDiiisco)
                 .addGap(28, 28, 28)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jblCodigoActualizarDisco)
@@ -443,7 +444,6 @@ public class ActualizarDisco extends javax.swing.JInternalFrame {
     private javax.swing.JButton bntBuscarDisco;
     private javax.swing.JButton bntCancelar4;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel38;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JLabel jblAnioLanzaminietoActualizarDisco;
@@ -453,6 +453,7 @@ public class ActualizarDisco extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jblIdActualizarDisco;
     private javax.swing.JLabel jblNombreActualizarDisco;
     private javax.swing.JLabel jblNombreArtisticoActualizarDisco;
+    private javax.swing.JLabel jblNombreDiiisco;
     private javax.swing.JLabel jblNombreDiscoActualizarDisco;
     private javax.swing.JPanel panelA;
     private javax.swing.JTextField txtAnioLanzamiento4;

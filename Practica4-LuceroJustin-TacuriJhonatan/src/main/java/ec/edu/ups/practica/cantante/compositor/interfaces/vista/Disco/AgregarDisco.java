@@ -32,13 +32,14 @@ public class AgregarDisco extends javax.swing.JInternalFrame {
     public void cambiarIdioma(Locale localizacion){
         mensajes = ResourceBundle.getBundle("mensajes.mensaje", localizacion);
         jblCodigoAgregarDisco.setText(mensajes.getString("ventana.codigo"));
-        jblIdAgregarDisco.setText(mensajes.getString("ventana.id"));
+        jblIdAgregarDisco.setText(mensajes.getString("jblbuuscar.cantante"));
         jblNombreCAgregarDisco.setText(mensajes.getString("ventana.nombre"));
         jblNombreArAgregarDisco.setText(mensajes.getString("ventanaCantante.nombreartistico"));
         jblEdadCAgregarDisco.setText(mensajes.getString("ventana.edad"));
         jblApellidoAAgregarDisco.setText(mensajes.getString("ventana.apellido"));
         jblNombreDiscoAgregarDisco.setText(mensajes.getString("ventana.nombre"));
         jblAnioLanzamientoAgregarDisco.setText(mensajes.getString("ventanaDisco.aniolanzamiento"));
+        jblNombreDiiisco.setText(mensajes.getString("jbl.nombrediscooooo"));
         bntBuscar.setText(mensajes.getString("boton.buscar"));
         bntAgregar.setText(mensajes.getString("boton.agregar"));
         bntCancelar.setText(mensajes.getString("boton.cancelar"));
@@ -59,7 +60,7 @@ public class AgregarDisco extends javax.swing.JInternalFrame {
         jblIdAgregarDisco = new javax.swing.JLabel();
         txtIdCantante = new javax.swing.JTextField();
         bntBuscar = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        jblNombreDiiisco = new javax.swing.JLabel();
         txtNombre = new javax.swing.JTextField();
         jblNombreCAgregarDisco = new javax.swing.JLabel();
         jblApellidoAAgregarDisco = new javax.swing.JLabel();
@@ -90,7 +91,7 @@ public class AgregarDisco extends javax.swing.JInternalFrame {
             }
         });
 
-        jLabel2.setText("Ingrese el nombre del disco");
+        jblNombreDiiisco.setText("Ingrese el nombre del disco");
 
         txtNombre.setEditable(false);
         txtNombre.setEnabled(false);
@@ -166,7 +167,7 @@ public class AgregarDisco extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jpanelALayout.createSequentialGroup()
-                        .addComponent(jLabel2)
+                        .addComponent(jblNombreDiiisco)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jpanelALayout.createSequentialGroup()
                         .addGap(18, 18, 18)
@@ -236,7 +237,7 @@ public class AgregarDisco extends javax.swing.JInternalFrame {
                             .addComponent(jblNombreArAgregarDisco)
                             .addComponent(txtNombreArtistico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(35, 35, 35)
-                        .addComponent(jLabel2))
+                        .addComponent(jblNombreDiiisco))
                     .addComponent(jLabel1))
                 .addGap(28, 28, 28)
                 .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -365,7 +366,6 @@ public class AgregarDisco extends javax.swing.JInternalFrame {
     private javax.swing.JButton bntBuscar;
     private javax.swing.JButton bntCancelar;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jblAnioLanzamientoAgregarDisco;
     private javax.swing.JLabel jblApellidoAAgregarDisco;
     private javax.swing.JLabel jblCodigoAgregarDisco;
@@ -373,6 +373,7 @@ public class AgregarDisco extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jblIdAgregarDisco;
     private javax.swing.JLabel jblNombreArAgregarDisco;
     private javax.swing.JLabel jblNombreCAgregarDisco;
+    private javax.swing.JLabel jblNombreDiiisco;
     private javax.swing.JLabel jblNombreDiscoAgregarDisco;
     private javax.swing.JPanel jpanelA;
     private javax.swing.JTextField txtAnioLanzamiento;

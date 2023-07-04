@@ -29,8 +29,6 @@ public class ControladorCantante {
         
     }
     
-
-    
     //llama al DAO para guardar un cliente
     public void registrar(Cantante cantante) {
         cantanteDao.create(cantante);

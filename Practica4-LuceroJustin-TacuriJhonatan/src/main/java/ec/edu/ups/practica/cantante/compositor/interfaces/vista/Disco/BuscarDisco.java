@@ -34,13 +34,14 @@ public class BuscarDisco extends javax.swing.JInternalFrame {
     public void cambiarIdioma(Locale localizacion){
         mensajes = ResourceBundle.getBundle("mensajes.mensaje", localizacion);
         jblCodigoBuscarDisco.setText(mensajes.getString("ventana.codigo"));
-        jblIdBuscarDisco.setText(mensajes.getString("ventana.id"));
+        jblIdBuscarDisco.setText(mensajes.getString("jblbuuscar.cantante"));
         jblNombreBuscarDisco.setText(mensajes.getString("ventana.nombre"));
         jblNombreArBuscarDisco.setText(mensajes.getString("ventanaCantante.nombreartistico"));
         jblEdadBuscarDisco.setText(mensajes.getString("ventana.edad"));
         jblApellidoBuscarDisco.setText(mensajes.getString("ventana.apellido"));
         jblNombreDiscoBuscarDisco.setText(mensajes.getString("ventana.nombre"));
         jblAnioLanzamientoBuscarDisco.setText(mensajes.getString("ventanaDisco.aniolanzamiento"));
+        jblNombreDiiisco.setText(mensajes.getString("jbl.nombrediscooooo"));
         bntBuscar4.setText(mensajes.getString("boton.buscar"));
         bntBuscarDisco.setText(mensajes.getString("boton.buscar"));
         bntCancelar4.setText(mensajes.getString("boton.cancelar")); 
@@ -61,7 +62,7 @@ public class BuscarDisco extends javax.swing.JInternalFrame {
         jblIdBuscarDisco = new javax.swing.JLabel();
         txtIdCantante4 = new javax.swing.JTextField();
         bntBuscar4 = new javax.swing.JButton();
-        jLabel38 = new javax.swing.JLabel();
+        jblNombreDiiisco = new javax.swing.JLabel();
         txtNombre4 = new javax.swing.JTextField();
         jblNombreBuscarDisco = new javax.swing.JLabel();
         jblApellidoBuscarDisco = new javax.swing.JLabel();
@@ -91,7 +92,7 @@ public class BuscarDisco extends javax.swing.JInternalFrame {
             }
         });
 
-        jLabel38.setText("Ingrese el nombre del disco");
+        jblNombreDiiisco.setText("Ingrese el nombre del disco");
 
         txtNombre4.setEditable(false);
         txtNombre4.setEnabled(false);
@@ -163,7 +164,7 @@ public class BuscarDisco extends javax.swing.JInternalFrame {
                 .addGap(23, 23, 23)
                 .addGroup(jpanelBLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jpanelBLayout.createSequentialGroup()
-                        .addComponent(jLabel38)
+                        .addComponent(jblNombreDiiisco)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jpanelBLayout.createSequentialGroup()
                         .addGap(18, 18, 18)
@@ -229,7 +230,7 @@ public class BuscarDisco extends javax.swing.JInternalFrame {
                     .addComponent(jblNombreArBuscarDisco)
                     .addComponent(txtNombreArtistico4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(35, 35, 35)
-                .addComponent(jLabel38)
+                .addComponent(jblNombreDiiisco)
                 .addGap(28, 28, 28)
                 .addGroup(jpanelBLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jblCodigoBuscarDisco)
@@ -357,7 +358,6 @@ public class BuscarDisco extends javax.swing.JInternalFrame {
     private javax.swing.JButton bntBuscar4;
     private javax.swing.JButton bntBuscarDisco;
     private javax.swing.JButton bntCancelar4;
-    private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jblAnioLanzamientoBuscarDisco;
     private javax.swing.JLabel jblApellidoBuscarDisco;
     private javax.swing.JLabel jblCodigoBuscarDisco;
@@ -365,6 +365,7 @@ public class BuscarDisco extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jblIdBuscarDisco;
     private javax.swing.JLabel jblNombreArBuscarDisco;
     private javax.swing.JLabel jblNombreBuscarDisco;
+    private javax.swing.JLabel jblNombreDiiisco;
     private javax.swing.JLabel jblNombreDiscoBuscarDisco;
     private javax.swing.JPanel jpanelB;
     private javax.swing.JTextField txtAnioLanzamiento4;

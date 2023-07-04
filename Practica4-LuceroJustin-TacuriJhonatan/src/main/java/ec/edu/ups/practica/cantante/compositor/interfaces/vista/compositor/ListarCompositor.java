@@ -88,6 +88,7 @@ public class ListarCompositor extends javax.swing.JInternalFrame {
             }
         });
 
+        jpanelA.setBackground(new java.awt.Color(153, 77, 38));
         jpanelA.setBorder(javax.swing.BorderFactory.createTitledBorder("LISTAR COMPOSITOR"));
 
         tblCompositor.setModel(new javax.swing.table.DefaultTableModel(

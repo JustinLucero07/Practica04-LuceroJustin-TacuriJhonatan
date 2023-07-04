@@ -33,13 +33,14 @@ public class EliminarDisco extends javax.swing.JInternalFrame {
     public void cambiarIdioma(Locale localizacion){
         mensajes = ResourceBundle.getBundle("mensajes.mensaje", localizacion);
         jblCodigoEliminarDisco.setText(mensajes.getString("ventana.codigo"));
-        jblIdEliminarDisco.setText(mensajes.getString("ventana.id"));
+        jblIdEliminarDisco.setText(mensajes.getString("jblbuuscar.cantante"));
         jblNombreEliminarDisco.setText(mensajes.getString("ventana.nombre"));
         jblNombreArEliminarDisco.setText(mensajes.getString("ventanaCantante.nombreartistico"));
         jblEdadEliminarDisco.setText(mensajes.getString("ventana.edad"));
         jblApellidoEliminarDisco.setText(mensajes.getString("ventana.apellido"));
         jblNombreDiscoEliminarDisco.setText(mensajes.getString("ventana.nombre"));
         jblAnioLanzamientoEliminarDisco.setText(mensajes.getString("ventanaDisco.aniolanzamiento"));
+        jblNombreDiiisco.setText(mensajes.getString("jbl.nombrediscooooo"));
         bntEliminar.setText(mensajes.getString("boton.eliminar"));
         bntBuscar4.setText(mensajes.getString("boton.buscar"));
         bntBuscarDisco.setText(mensajes.getString("boton.buscar"));
@@ -61,7 +62,7 @@ public class EliminarDisco extends javax.swing.JInternalFrame {
         jblIdEliminarDisco = new javax.swing.JLabel();
         txtIdCantante4 = new javax.swing.JTextField();
         bntBuscar4 = new javax.swing.JButton();
-        jLabel38 = new javax.swing.JLabel();
+        jblNombreDiiisco = new javax.swing.JLabel();
         txtNombre4 = new javax.swing.JTextField();
         jblNombreEliminarDisco = new javax.swing.JLabel();
         jblApellidoEliminarDisco = new javax.swing.JLabel();
@@ -92,7 +93,7 @@ public class EliminarDisco extends javax.swing.JInternalFrame {
             }
         });
 
-        jLabel38.setText("Ingrese el nombre del disco");
+        jblNombreDiiisco.setText("Ingrese el nombre del disco");
 
         txtNombre4.setEditable(false);
         txtNombre4.setEnabled(false);
@@ -172,7 +173,7 @@ public class EliminarDisco extends javax.swing.JInternalFrame {
                 .addGap(23, 23, 23)
                 .addGroup(jpanelELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jpanelELayout.createSequentialGroup()
-                        .addComponent(jLabel38)
+                        .addComponent(jblNombreDiiisco)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jpanelELayout.createSequentialGroup()
                         .addGap(18, 18, 18)
@@ -243,7 +244,7 @@ public class EliminarDisco extends javax.swing.JInternalFrame {
                     .addComponent(jblNombreArEliminarDisco)
                     .addComponent(txtNombreArtistico4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(35, 35, 35)
-                .addComponent(jLabel38)
+                .addComponent(jblNombreDiiisco)
                 .addGap(28, 28, 28)
                 .addGroup(jpanelELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jblCodigoEliminarDisco)
@@ -395,13 +396,13 @@ public class EliminarDisco extends javax.swing.JInternalFrame {
     private javax.swing.JButton bntBuscarDisco;
     private javax.swing.JButton bntCancelar4;
     private javax.swing.JButton bntEliminar;
-    private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jblAnioLanzamientoEliminarDisco;
     private javax.swing.JLabel jblApellidoEliminarDisco;
     private javax.swing.JLabel jblCodigoEliminarDisco;
     private javax.swing.JLabel jblEdadEliminarDisco;
     private javax.swing.JLabel jblIdEliminarDisco;
     private javax.swing.JLabel jblNombreArEliminarDisco;
+    private javax.swing.JLabel jblNombreDiiisco;
     private javax.swing.JLabel jblNombreDiscoEliminarDisco;
     private javax.swing.JLabel jblNombreEliminarDisco;
     private javax.swing.JPanel jpanelE;

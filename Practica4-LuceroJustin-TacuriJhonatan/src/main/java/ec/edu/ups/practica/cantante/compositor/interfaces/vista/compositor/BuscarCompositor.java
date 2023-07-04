@@ -96,7 +96,7 @@ public class BuscarCompositor extends javax.swing.JInternalFrame {
 
         jblIdBuscarCompositor.setText("ID:");
         jpanelA.add(jblIdBuscarCompositor);
-        jblIdBuscarCompositor.setBounds(60, 38, 14, 16);
+        jblIdBuscarCompositor.setBounds(60, 38, 60, 16);
 
         jblNombreBuscarCompositor.setText("Nombre:");
         jpanelA.add(jblNombreBuscarCompositor);
@@ -104,7 +104,7 @@ public class BuscarCompositor extends javax.swing.JInternalFrame {
 
         jblApellidoBuscarCompositor.setText("Apellido:");
         jpanelA.add(jblApellidoBuscarCompositor);
-        jblApellidoBuscarCompositor.setBounds(60, 100, 47, 16);
+        jblApellidoBuscarCompositor.setBounds(60, 100, 70, 16);
 
         jblEdadBuscarCompositor.setText("Edad:");
         jpanelA.add(jblEdadBuscarCompositor);
@@ -112,11 +112,11 @@ public class BuscarCompositor extends javax.swing.JInternalFrame {
 
         jblNacionalidadBuscarCompositor.setText("Nacionalidad:");
         jpanelA.add(jblNacionalidadBuscarCompositor);
-        jblNacionalidadBuscarCompositor.setBounds(60, 168, 73, 16);
+        jblNacionalidadBuscarCompositor.setBounds(60, 168, 90, 16);
 
         jblSalarioBuscarCompositor.setText("Salario:");
         jpanelA.add(jblSalarioBuscarCompositor);
-        jblSalarioBuscarCompositor.setBounds(60, 208, 38, 16);
+        jblSalarioBuscarCompositor.setBounds(60, 208, 60, 16);
 
         jblNumeroComposiconesBuscarCompositor.setText("Numero de Composiciones:");
         jpanelA.add(jblNumeroComposiconesBuscarCompositor);
