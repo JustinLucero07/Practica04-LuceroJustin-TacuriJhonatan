@@ -5,12 +5,15 @@
 package ec.edu.ups.practica.cantante.compositor.interfaces.vista.compositor;
 
 import ec.edu.ups.practica.cantante.compositor.interfaces.controlador.ControladorCompositor;
+import ec.edu.ups.practica.cantante.compositor.interfaces.modelo.Cancion;
 import ec.edu.ups.practica.cantante.compositor.interfaces.modelo.Compositor;
+import java.util.List;
 import java.util.Locale;
 import java.util.ResourceBundle;
 import javax.swing.BorderFactory;
 import javax.swing.JOptionPane;
 import javax.swing.border.Border;
+import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
 import javax.swing.table.TableColumnModel;
 
@@ -21,6 +24,7 @@ import javax.swing.table.TableColumnModel;
 public class BuscarPorTitulo extends javax.swing.JInternalFrame {
     private ControladorCompositor controladorCompositor;
     private ResourceBundle mensajes;
+    private Compositor compositorTempo;
     /**
      * Creates new form BuscarPorTitulo
      */
@@ -303,7 +307,7 @@ public class BuscarPorTitulo extends javax.swing.JInternalFrame {
                 txtNacionalidad.setText(compositorTempo.getNacionalidad());
                 txtSalario.setText(String.valueOf(compositorTempo.calcularSalario()));
                 txtNumeroComposiciones.setText(String.valueOf(compositorTempo.getNumeroDeComposiciones()));
-
+                this.actualizarTabla();
             }else{
                 this.limpiarCampos();
                 JOptionPane.showMessageDialog(this, mensajes.getString("joption.noexistetitulo"));  
@@ -318,6 +322,26 @@ public class BuscarPorTitulo extends javax.swing.JInternalFrame {
         this.setVisible(false);
     }//GEN-LAST:event_btnCancelarActionPerformed
 
+    
+    private void actualizarTabla(){
+        DefaultTableModel modelo = (DefaultTableModel)this.tblCancion.getModel();
+        modelo.setNumRows(0);
+        List <Cancion> listaCan = compositorTempo.getCancionesTop100Billboard();
+        //if (listaPersonas!=null) {
+            for (Cancion listaCa : listaCan) {
+                int cod = listaCa.getCodigo();
+                String nom = listaCa.getTitulo();
+                String letra= listaCa.getLetra();
+                double duracion = listaCa.getTiempoEnMinutos();
+                Object[] rowDate = {cod,nom,letra,duracion};
+                modelo.addRow(rowDate);
+            }
+            this.tblCancion.setModel(modelo);
+        //}else{
+          //  JOptionPane.showMessageDialog(this, "No se ha ingresado ningun cantante aun");
+        //}
+    }
+    
     private void limpiarCampos(){
         txtTituloCancion.setText(""); 
         txtId.setText("");

@@ -80,6 +80,28 @@ public class BuscarDisco extends javax.swing.JInternalFrame {
         bntCancelar4 = new javax.swing.JButton();
         bntBuscarDisco = new javax.swing.JButton();
 
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+        setResizable(true);
+        addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
+            public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosed(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosing(javax.swing.event.InternalFrameEvent evt) {
+                formInternalFrameClosing(evt);
+            }
+            public void internalFrameDeactivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeiconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameIconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameOpened(javax.swing.event.InternalFrameEvent evt) {
+            }
+        });
+
         jpanelB.setBackground(new java.awt.Color(255, 204, 153));
         jpanelB.setBorder(javax.swing.BorderFactory.createTitledBorder("BUSCAR DISCO"));
 
@@ -352,6 +374,10 @@ public class BuscarDisco extends javax.swing.JInternalFrame {
             }
         }
     }//GEN-LAST:event_bntBuscarDiscoActionPerformed
+
+    private void formInternalFrameClosing(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameClosing
+        this.limpiarCampos();
+    }//GEN-LAST:event_formInternalFrameClosing
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

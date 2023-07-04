@@ -93,7 +93,28 @@ public class EliminarCancion extends javax.swing.JInternalFrame {
         btnCancelar = new javax.swing.JButton();
         btnEliminarCancion = new javax.swing.JButton();
 
+        setClosable(true);
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
+        setIconifiable(true);
+        setMaximizable(true);
+        setResizable(true);
+        addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
+            public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosed(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosing(javax.swing.event.InternalFrameEvent evt) {
+                formInternalFrameClosing(evt);
+            }
+            public void internalFrameDeactivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeiconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameIconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameOpened(javax.swing.event.InternalFrameEvent evt) {
+            }
+        });
 
         jpanelA.setBorder(javax.swing.BorderFactory.createTitledBorder("ELIMINAR CANCION"));
 
@@ -507,6 +528,11 @@ public class EliminarCancion extends javax.swing.JInternalFrame {
             JOptionPane.showMessageDialog(this, mensajes.getString("joption.noseeliminolacancion")); 
         }
     }//GEN-LAST:event_btnEliminarCancionActionPerformed
+
+    private void formInternalFrameClosing(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameClosing
+        this.limpiarCampos();
+        this.limpiarCamposCancion();
+    }//GEN-LAST:event_formInternalFrameClosing
 
     
     private void limpiarCampos(){

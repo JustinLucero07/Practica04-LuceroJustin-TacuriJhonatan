@@ -72,6 +72,28 @@ public class EliminarCompositor extends javax.swing.JInternalFrame {
         btnEliminarCompositor = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+        setResizable(true);
+        addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
+            public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosed(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosing(javax.swing.event.InternalFrameEvent evt) {
+                formInternalFrameClosing(evt);
+            }
+            public void internalFrameDeactivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeiconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameIconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameOpened(javax.swing.event.InternalFrameEvent evt) {
+            }
+        });
+
         jpanelA.setBorder(javax.swing.BorderFactory.createTitledBorder("ELIMINAR COMPOSITOR"));
         jpanelA.setLayout(null);
 
@@ -283,6 +305,10 @@ public class EliminarCompositor extends javax.swing.JInternalFrame {
             JOptionPane.showMessageDialog(this, mensajes.getString("joption.noseelimino")); 
         }
     }//GEN-LAST:event_btnEliminarCompositorActionPerformed
+
+    private void formInternalFrameClosing(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameClosing
+        this.limpiarCampos();
+    }//GEN-LAST:event_formInternalFrameClosing
 
     
     private void limpiarCampos(){

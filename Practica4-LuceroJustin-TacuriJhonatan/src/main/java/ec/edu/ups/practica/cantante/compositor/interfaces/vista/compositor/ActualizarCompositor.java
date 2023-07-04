@@ -75,6 +75,28 @@ public class ActualizarCompositor extends javax.swing.JInternalFrame {
 
         jButton1.setText("jButton1");
 
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+        setResizable(true);
+        addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
+            public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosed(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosing(javax.swing.event.InternalFrameEvent evt) {
+                formInternalFrameClosing(evt);
+            }
+            public void internalFrameDeactivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeiconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameIconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameOpened(javax.swing.event.InternalFrameEvent evt) {
+            }
+        });
+
         jpanelA.setBorder(javax.swing.BorderFactory.createTitledBorder("ACTUALIZAR COMPOSITOR"));
         jpanelA.setLayout(null);
 
@@ -294,6 +316,10 @@ public class ActualizarCompositor extends javax.swing.JInternalFrame {
         this.limpiarCampos();
         btnAceptar.setEnabled(true);
     }//GEN-LAST:event_btnActualizarCompositorActionPerformed
+
+    private void formInternalFrameClosing(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameClosing
+        this.limpiarCampos();
+    }//GEN-LAST:event_formInternalFrameClosing
 
     
     private void limpiarCampos(){

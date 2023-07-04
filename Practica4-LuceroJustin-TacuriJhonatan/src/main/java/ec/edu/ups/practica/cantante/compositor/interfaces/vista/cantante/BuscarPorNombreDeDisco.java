@@ -87,6 +87,28 @@ public class BuscarPorNombreDeDisco extends javax.swing.JInternalFrame {
         jLabel13 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+        setResizable(true);
+        addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
+            public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosed(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosing(javax.swing.event.InternalFrameEvent evt) {
+                formInternalFrameClosing(evt);
+            }
+            public void internalFrameDeactivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeiconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameIconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameOpened(javax.swing.event.InternalFrameEvent evt) {
+            }
+        });
+
         jpanelA.setBorder(javax.swing.BorderFactory.createTitledBorder("BUSCAR POR NOMBRE DE DISCO"));
 
         jLabel1.setText("Ingrese el nombre del disco para encontrar al cantante :");
@@ -342,6 +364,10 @@ public class BuscarPorNombreDeDisco extends javax.swing.JInternalFrame {
             }
         }
     }//GEN-LAST:event_btnBuscarActionPerformed
+
+    private void formInternalFrameClosing(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameClosing
+        this.limpiarCampos();
+    }//GEN-LAST:event_formInternalFrameClosing
 
     private void limpiarCampos(){
         
