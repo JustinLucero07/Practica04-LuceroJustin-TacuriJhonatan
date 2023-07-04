@@ -118,11 +118,11 @@ public class CrearCantante extends javax.swing.JInternalFrame {
 
         jblNombreCrearCantante.setText("Nombre:");
         jpanelA.add(jblNombreCrearCantante);
-        jblNombreCrearCantante.setBounds(71, 100, 58, 16);
+        jblNombreCrearCantante.setBounds(71, 100, 110, 16);
 
         jblApellidoCrearCantante.setText("Apellido:");
         jpanelA.add(jblApellidoCrearCantante);
-        jblApellidoCrearCantante.setBounds(71, 134, 58, 16);
+        jblApellidoCrearCantante.setBounds(71, 134, 110, 16);
 
         jblEdadCrearCantante.setText("Edad:");
         jpanelA.add(jblEdadCrearCantante);
@@ -130,7 +130,7 @@ public class CrearCantante extends javax.swing.JInternalFrame {
 
         jblNacionalidadCrearCantante.setText("Nacionalidad:");
         jpanelA.add(jblNacionalidadCrearCantante);
-        jblNacionalidadCrearCantante.setBounds(71, 220, 86, 16);
+        jblNacionalidadCrearCantante.setBounds(71, 220, 110, 16);
 
         jblSalarioCrearCantante.setText("Salario:");
         jpanelA.add(jblSalarioCrearCantante);
@@ -142,19 +142,19 @@ public class CrearCantante extends javax.swing.JInternalFrame {
 
         jblGeneroMusicalCrearCantante.setText("Genero Musical:");
         jpanelA.add(jblGeneroMusicalCrearCantante);
-        jblGeneroMusicalCrearCantante.setBounds(71, 338, 118, 16);
+        jblGeneroMusicalCrearCantante.setBounds(71, 338, 140, 16);
 
         jblNumeroSencillosCrearCantante.setText("Numero de Sencillos:");
         jpanelA.add(jblNumeroSencillosCrearCantante);
-        jblNumeroSencillosCrearCantante.setBounds(71, 375, 118, 16);
+        jblNumeroSencillosCrearCantante.setBounds(71, 375, 180, 16);
 
         jblNumeroConciertosCrearCantante.setText("Numero de Conciertos:");
         jpanelA.add(jblNumeroConciertosCrearCantante);
-        jblNumeroConciertosCrearCantante.setBounds(71, 415, 133, 16);
+        jblNumeroConciertosCrearCantante.setBounds(71, 415, 170, 16);
 
         jblNumeroGirasCrearCantante.setText("Numero de Giras:");
         jpanelA.add(jblNumeroGirasCrearCantante);
-        jblNumeroGirasCrearCantante.setBounds(71, 455, 133, 16);
+        jblNumeroGirasCrearCantante.setBounds(71, 455, 160, 16);
         jpanelA.add(txtID);
         txtID.setBounds(270, 54, 198, 22);
         jpanelA.add(txtNombre);
